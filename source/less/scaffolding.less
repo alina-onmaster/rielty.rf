@@ -12,10 +12,15 @@ html {
 
 body {
   min-width: @sm-width;
+  min-height: 100vh;
   .mp();
   .text();
   color: @text-color;
-  background-color: @bg-body;
+  background-image: url("../img/page/noize.png");
+  background-repeat: repeat;
+  background-position: top center;
+  background-color: rgba(@light, 0.9);
+  background-blend-mode: screen;
 }
 
 img {
