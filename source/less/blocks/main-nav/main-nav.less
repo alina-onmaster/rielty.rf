@@ -32,7 +32,9 @@
 
   &__wrap {
     position: relative;
-    .container();
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -43,6 +45,9 @@
 
     @media (min-width: @lg-width) {
       min-height: unset;
+      align-items: flex-start;
+      padding-left: 0;
+      padding-right: 0;
     }
   }
 

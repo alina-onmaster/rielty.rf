@@ -1,0 +1,43 @@
+.intro {
+  margin-bottom: 80px;
+  &__title {
+    .mp();
+    .h1();
+    text-transform: uppercase;
+    margin-bottom: 15px;
+
+    & span {
+      color: @company-color;
+    }
+  }
+
+  &__description {
+    .text();
+    margin-bottom: 10px;
+  }
+
+  &__description-btn {
+    display: flex;
+    margin: 0 auto;
+  }
+
+  &__tags {
+    display: none;
+  }
+
+  &__img-wrap {
+    &--1 {
+      & img {
+        aspect-ratio: 300 / 215;
+        object-fit: cover;
+        object-position: center;
+      }
+
+    }
+
+    &--2,
+    &--3 {
+      display: none;
+    }
+  }
+}

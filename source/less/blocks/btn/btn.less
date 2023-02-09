@@ -5,9 +5,34 @@
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding: 17px;
   border: 1px solid;
   transition: @transition;
+  width: 300px;
+  min-height: 55px;
+
+  &:hover {
+    text-decoration: none;
+  }
+  &:focus {
+    outline: none;
+  }
+
+  @media (min-width: @lg-width) {
+    width: 345px;
+    min-height: 60px;
+  }
+
+  &--color {
+    border-color: @company-color;
+    color: @light;
+    background-color: @company-color;
+
+    &:hover,
+    &:focus {
+      color: @company-color;
+      background-color: transparent;
+    }
+  }
 }
 
