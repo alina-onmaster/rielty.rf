@@ -1,14 +1,17 @@
-var navMain = document.querySelector('.main-nav');
-var navToggle = document.querySelector('.main-nav__toggle');
+let openMenuBtn = document.querySelector(".burger");
+let closeMenuBtn = document.querySelector(".main-nav__close-btn");
+let menu = document.querySelector(".main-nav");
+let windowWidth = document.documentElement.clientWidth;
 
-navMain.classList.remove('main-nav--nojs');
 
-navToggle.addEventListener('click', function() {
-  if (navMain.classList.contains('main-nav--closed')) {
-    navMain.classList.remove('main-nav--closed');
-    navMain.classList.add('main-nav--opened');
-  } else {
-    navMain.classList.add('main-nav--closed');
-    navMain.classList.remove('main-nav--opened');
-  }
-});
+openMenuBtn.onclick = function () {
+  if (windowWidth < 992) {
+    menu.classList.add("main-nav--opened");
+  };
+};
+
+closeMenuBtn.onclick = function () {
+  if (windowWidth < 992) {
+    menu.classList.remove("main-nav--opened");
+  };
+};

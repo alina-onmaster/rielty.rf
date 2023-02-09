@@ -28,6 +28,22 @@ img {
   height: auto;
 }
 
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: @transition;
+
+  &:hover {
+    color: @company-color;
+    text-decoration: underline;
+  }
+
+  &:focus {
+    color: @company-color;
+    outline-color: @company-color;
+  }
+}
+
 .visually-hidden:not(:focus):not(:active) {
   position: absolute;
   overflow: hidden;

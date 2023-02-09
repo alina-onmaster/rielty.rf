@@ -1,0 +1,24 @@
+.site-nav {
+  margin-bottom: 40px;
+
+  @media (min-width: @lg-width) {
+    margin-bottom: 0;
+  }
+  &__list {
+    .list();
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    .descriptor();
+
+    @media (min-width: @lg-width) {
+      .navi-title();
+      flex-direction: row;
+      gap: 60px;
+    }
+  }
+
+  &__item {
+    text-align: center;
+  }
+}

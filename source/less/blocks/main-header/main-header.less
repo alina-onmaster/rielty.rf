@@ -7,12 +7,55 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @media (min-width: @md-width) {
+      column-gap: 30px;
+    }
+
+    @media (min-width: @lg-width) {
+      display: grid;
+      grid-template-columns: 1fr 54px 1fr;
+      grid-template-areas: "nav logo contacts";
+      column-gap: 18px;
+      padding-top: 30px;
+      padding-bottom: 20px;
+    }
   }
 
   & .logo {
     & .icon {
       width: 40px;
       height: 66px;
+    }
+
+    @media (min-width: @md-width) {
+      & .icon {
+        width: 54px;
+        height: 89px;
+      }
+    }
+
+    @media (min-width: @lg-width) {
+      grid-area: logo;
+    }
+
+
+  }
+
+  &__contacts {
+    display: none;
+
+    @media (min-width: @md-width) {
+      display: block;
+      margin-left: auto;
+
+      & .phone-number {
+        .navi-title();
+      }
+    }
+
+    @media (min-width: @lg-width) {
+      grid-area: contacts;
     }
   }
 
@@ -22,5 +65,4 @@
       height: 20px;
     }
   }
-
 }
