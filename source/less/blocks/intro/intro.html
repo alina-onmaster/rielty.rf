@@ -1,5 +1,5 @@
 <section class="intro">
-  <div class="page__wrap">
+  <div class="page__wrap intro__grid">
     <h1 class="intro__title">Продадим вашу квартиру и подверем новую <span>за 1 месяц*</span></h1>
     <div class="intro__description">
       <p>Полный сервис работы с недвижимостью: покупка, продажа, оформление ипотеки, дизайн, ремонт, приемка квартиры</p>
@@ -7,23 +7,50 @@
     </div>
     <div class="intro__tags tags">
       <ul class="tags__list">
-        <li>Эксперты недвижимости</li>
-        <li>Ипотека, рассрочка, Trade-in</li>
-        <li>Сервис бесплатных консультаций</li>
-        <li>Новостройки по ценам застройщиков</li>
+        <li class="tags__item">Эксперты недвижимости</li>
+        <li class="tags__item">Ипотека, рассрочка, Trade-in</li>
+        <li class="tags__item">Сервис бесплатных консультаций</li>
+        <li class="tags__item">Новостройки по ценам застройщиков</li>
       </ul>
     </div>
     <div class="intro__img-wrap intro__img-wrap--1">
-      <img src="./img/intro/image1.jpg">
+      <picture>
+        <source type="image/webp" srcset="
+            ./img/intro/image1-750@1x.webp 1x,
+            ./img/intro/image1-750@2x.webp 2x,
+            ./img/intro/image1-750@3x.webp 3x">
+        <source type="image/jpeg" srcset="
+            ./img/intro/image1-750@1x.jpg 1x,
+            ./img/intro/image1-750@2x.jpg 2x,
+            ./img/intro/image1-750@3x.jpg 3x">
+        <img class="intro__img" src="./img/intro/image1-750@1x.jpg" alt="Новостройка">
+      </picture>
     </div>
     <div class="intro__img-wrap intro__img-wrap--2">
-      <img src="./img/intro/image2.jpg">
+      <picture>
+        <source type="image/webp" srcset="
+            ./img/intro/image2-750@1x.webp 1x,
+            ./img/intro/image2-750@2x.webp 2x,
+            ./img/intro/image2-750@3x.webp 3x">
+        <source type="image/jpeg" srcset="
+            ./img/intro/image2-750@1x.jpg 1x,
+            ./img/intro/image2-750@2x.jpg 2x,
+            ./img/intro/image2-750@3x.jpg 3x">
+        <img class="intro__img" src="./img/intro/image2-750@1x.jpg" alt="Кухонный интерьер">
+      </picture>
     </div>
     <div class="intro__img-wrap intro__img-wrap--3">
-      <img src="./img/intro/image3.jpg">
+      <picture>
+        <source type="image/webp" srcset="
+            ./img/intro/image3-750@1x.webp 1x,
+            ./img/intro/image3-750@2x.webp 2x,
+            ./img/intro/image3-750@3x.webp 3x">
+        <source type="image/jpeg" srcset="
+            ./img/intro/image3-750@1x.jpg 1x,
+            ./img/intro/image3-750@2x.jpg 2x,
+            ./img/intro/image3-750@3x.jpg 3x">
+        <img class="intro__img" src="./img/intro/image3-750@1x.jpg" alt="Строительство">
+      </picture>
     </div>
-
-
-
   </div>
 </section>
