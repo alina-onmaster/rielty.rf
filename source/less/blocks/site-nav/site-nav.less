@@ -1,24 +1,37 @@
 .site-nav {
-  margin-bottom: 40px;
+  width: 100%;
+  margin-bottom: 20px;
 
   @media (min-width: @lg-width) {
+    width: unset;
     margin-bottom: 0;
   }
   &__list {
     .list();
+
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 20px;
     .descriptor();
 
     @media (min-width: @lg-width) {
       .navi-title();
       flex-direction: row;
-      gap: 60px;
+      gap: 40px;
     }
   }
 
   &__item {
     text-align: center;
+  }
+
+  &__item a {
+    display: block;
+    width: 100%;
+    padding: 10px;
+
+    @media (min-width: @lg-width) {
+      width: unset;
+    }
   }
 }
