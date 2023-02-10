@@ -1,13 +1,5 @@
 .intro {
-  margin-bottom: 80px;
 
-  @media (min-width: @md-width) {
-    margin-bottom: 100px;
-  }
-
-  @media (min-width: @lg-width) {
-    margin-bottom: 140px;
-  }
   &__grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -27,16 +19,12 @@
 
     @media (min-width: @lg-width) {
       gap: 30px;
-      grid-template-columns: 278px 585fr 277fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
       grid-template-areas:
-      "title title image2"
-      "description image3 image2"
-      "description image3 image1"
-      "tags image3 image1";
-    }
-
-    @media (min-width: @xl-width) {
-      grid-template-columns: 278fr 585fr 277fr;
+      "title title title image2"
+      "description image3 image3 image2"
+      "description image3 image3 image1"
+      "tags image3 image3 image1";
     }
   }
 

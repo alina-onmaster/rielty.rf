@@ -3,68 +3,25 @@
     .container();
   }
 
-  &__h1 {
-    .mp();
-    .h1();
+  &__section {
+    margin-bottom: 80px;
+
+    @media (min-width: @md-width) {
+      margin-bottom: 100px;
+    }
+
+    @media (min-width: @lg-width) {
+      margin-bottom: 140px;
+    }
   }
 
-  &__h2 {
+  &__subtitle {
     .mp();
     .h2();
-  }
+    margin-bottom: 30px;
 
-  &__h3 {
-    .mp();
-    .h3();
-  }
-
-  &__h4 {
-    .mp();
-    .h4();
-  }
-
-  &__descriptor {
-    .mp();
-    .descriptor();
-  }
-
-  &__descriptor-2 {
-    .mp();
-    .descriptor-2();
-  }
-
-  &__text {
-    .mp();
-    .text();
-  }
-
-  &__text-2 {
-    .mp();
-    .text-2();
-  }
-
-  &__text-3 {
-    .mp();
-    .text-3();
-  }
-
-  &__navi-title {
-    .mp();
-    .navi-title();
-  }
-
-  &__button-title {
-    .mp();
-    .button-title();
-  }
-
-  &__caption {
-    .mp();
-    .caption();
-  }
-
-  &__field-title {
-    .mp();
-    .field-title();
+    @media (min-width: @md-width) {
+      margin-bottom: 40px;
+    }
   }
 }

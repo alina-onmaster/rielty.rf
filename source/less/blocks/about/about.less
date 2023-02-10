@@ -1,3 +1,66 @@
 .about {
+  &__grid {
+    @media (min-width: @lg-width) {
+      display: grid;
+      gap: 30px;
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas:
+      "title main-text"
+      ". main-text"
+      ". text";
+    }
+  }
 
+  &__title {
+    text-transform: uppercase;
+
+    @media (min-width: @lg-width) {
+      grid-area: title;
+    }
+  }
+
+  &__main-text {
+    .h4();
+    margin-bottom: 20px;
+
+    @media (min-width: @lg-width) {
+      margin-bottom: 0;
+      grid-area: main-text;
+    }
+
+    & span {
+      color: @company-color;
+    }
+
+    & p {
+      .mp();
+    }
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    @media (min-width: @md-width) {
+      flex-direction: row;
+      gap: 20px;
+    }
+
+    @media (min-width: @lg-width) {
+      gap: 30px;
+      grid-area: text;
+    }
+  }
+
+  &__text-column {
+    .mp();
+    .text();
+    color: @gray;
+
+    @media (min-width: @md-width) {
+      width: 45%;
+      flex-grow: 1;
+    }
+  }
 }
