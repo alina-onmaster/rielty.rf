@@ -24,4 +24,22 @@
       margin-bottom: 40px;
     }
   }
+
+  &__h3 {
+    .mp();
+    .h3();
+    margin-bottom: 30px;
+
+    @media (min-width: @md-width) {
+      .h2();
+    }
+
+    @media (min-width: @lg-width) {
+      margin-bottom: 40px;
+    }
+
+    & span {
+      color: @company-color;
+    }
+  }
 }
