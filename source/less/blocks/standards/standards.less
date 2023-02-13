@@ -27,6 +27,12 @@
         top: 0;
       }
     }
+
+    @media (min-width: @lg-width) {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: repeat(2, 1fr);
+      grid-auto-flow: column;
+    }
   }
 
   &__item {
@@ -37,14 +43,12 @@
       position: relative;
       display: grid;
       grid-template-columns: 1fr 1fr;
-      grid-template-rows: auto 1fr;
       column-gap: 20px;
       padding: 0;
 
       &:nth-child(2n+1) {
         grid-template-areas:
-      "image title"
-      "image description";
+      "image text";
 
         & .standard__img-wrap {
           &::before{
@@ -61,8 +65,7 @@
 
       &:nth-child(2n) {
         grid-template-areas:
-          "title image"
-          "description image";
+          "text image";
 
         &::before{
           content: "";
@@ -75,6 +78,7 @@
         }
 
         &:last-child {
+          & .standard__description,
           & .standard__img-wrap {
             &::after {
               display: none;
@@ -90,7 +94,38 @@
       }
     }
 
+    @media (min-width: @lg-width) {
+      column-gap: 30px;
 
+      &:nth-child(2n+1) {
+        & .standard__img-wrap {
+          &::before{
+            right: -15px;
+          }
+        }
+      }
+
+      &:nth-child(2n) {
+        & .standard__img-wrap {
+          &::after {
+            width: 1px;
+            height: 100%;
+            top: 0;
+            right: -15px;
+            bottom: unset;
+            left: unset;
+          }
+        }
+      }
+
+      &:nth-child(3) {
+        & .standard__text-wrap {
+          &::before {
+            display: none;
+          }
+        }
+      }
+    }
 
     &:first-child {
       &::after {
@@ -124,18 +159,12 @@
   }
 
   & .standard {
-    &__title {
-      @media (min-width: @md-width) {
-        max-width: 278px;
-        padding-top: 15px;
-        grid-area: title;
-      }
-    }
-    &__description {
+    &__text-wrap {
       @media (min-width: @md-width) {
         position: relative;
+        padding-top: 15px;
         padding-bottom: 15px;
-        grid-area: description;
+        grid-area: text;
 
         &::after {
           content: "";
@@ -147,6 +176,23 @@
           background-color: @gray-light;
         }
 
+      }
+
+      @media (min-width: @lg-width) {
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          right: -15px;
+          width: 1px;
+          height: 100%;
+          background-color: @gray-light;
+        }
+      }
+    }
+    &__title {
+      @media (min-width: @md-width) {
+        grid-area: title;
       }
     }
     &__img-wrap {
