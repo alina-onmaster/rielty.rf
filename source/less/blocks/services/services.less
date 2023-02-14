@@ -1,0 +1,122 @@
+.services {
+  &__list {
+    .list();
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+
+    @media (min-width: @md-width) {
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    @media (min-width: @lg-width) {
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+    }
+
+    @media (min-width: @xl-width) {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+  }
+
+  &__item {
+    & a {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      background-color: @light;
+      padding: 14px 14px 14px 20px;
+      transition: @transition;
+
+      & .service__detail-link {
+        display: none;
+      }
+
+      @media (min-width: @md-width) {
+        position: relative;
+        overflow: hidden;
+        aspect-ratio: 354 / 312;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: 30px;
+
+        &:hover,
+        &:focus {
+          & .service__img {
+            transform: scale(1.1);
+          }
+        }
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(0deg, rgba(0, 0, 0, 0.35));
+          z-index: 1;
+        }
+      }
+
+      @media (min-width: @lg-width) {
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+        height: 312px;
+        padding: 25px;
+
+        &:hover,
+        &:focus {
+          cursor: default;
+          & .service__detail-link {
+            cursor: pointer;
+            display: flex;
+          }
+        }
+
+        & .service__detail-link {
+          position: relative;
+          display: none;
+          z-index: 5;
+        }
+      }
+
+      @media (min-width: @xl-width) {
+        width: unset;
+        height: unset;
+        aspect-ratio: 277 / 312;
+      }
+
+      &:hover,
+      &:focus {
+        color: @company-color;
+        text-decoration: none;
+        box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+        outline: none;
+
+        & .icon {
+          & use.icon__symbol {
+            stroke: @company-color;
+          }
+        }
+      }
+    }
+  }
+
+  &__item a .icon {
+    display: block;
+    width: 32px;
+    height: 32px;
+
+    @media (min-width: @md-width) {
+      display: none;
+    }
+
+    & use.icon__symbol {
+      stroke: @dark;
+    }
+  }
+}

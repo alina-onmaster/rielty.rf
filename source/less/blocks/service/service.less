@@ -1,0 +1,51 @@
+.services__list .service {
+  &__img-wrap {
+    display: none;
+
+    @media (min-width: @md-width) {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: @transition;
+  }
+
+  &__title {
+    .mp();
+    .text();
+
+    @media (min-width: @md-width) {
+      .h3();
+      width: 217px;
+      position: relative;
+      color: @light;
+      z-index: 5;
+    }
+  }
+
+  &__detail-link {
+    margin-top: 0;
+    margin-bottom: 0;
+    width: auto;
+
+/*    &:hover,
+    &:focus {
+      background-color: @company-color;
+    }*/
+
+    @media (min-width: @lg-width) {
+      width: 100%;
+    }
+  }
+}
