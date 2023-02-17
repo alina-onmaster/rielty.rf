@@ -1,0 +1,90 @@
+.complexes__item.complex {
+  color: @light;
+  &--svetlaya-dolina {
+    background:
+      linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+      url("../img/complex/svetlaya-dolina.jpg") no-repeat center;
+    background-size: cover;
+  }
+}
+
+.complexes__item .complex {
+  @media (min-width: @lg-width) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__title {
+    .mp();
+    .descriptor-2();
+    text-align: center;
+    margin-top: 57px;
+    margin-bottom: 5px;
+    transition: @transition;
+
+    @media (min-width: @md-width) {
+      margin-top: 102px;
+    }
+
+    @media (min-width: @lg-width) {
+      margin-top: 37px;
+      transform: translateY(100px);
+    }
+
+    & span {
+      display: block;
+      transition: @transition;
+
+      @media (min-width: @lg-width) {
+        opacity: 0;
+        transform: translateY(-85px);
+      }
+    }
+
+    @media (min-width: @md-width) {
+      .h2();
+      margin-bottom: 10px;
+    }
+  }
+
+  &__description {
+    .text-3();
+    text-align: center;
+    flex-grow: 1;
+    margin-bottom: 15px;
+    transition: @transition;
+
+    @media (min-width: @md-width) {
+      .caption();
+      margin-bottom: 30px;
+    }
+
+    @media (min-width: @lg-width) {
+      flex-grow: 1;
+      opacity: 0;
+      transform: translateY(500px);
+    }
+  }
+
+  &__detail-link {
+    display: flex;
+    margin: 0 auto;
+    width: 100%;
+    margin-bottom: 44px;
+    max-width: 260px;
+    min-width: unset;
+    transition: @transition;
+
+    @media (min-width: @md-width) {
+      margin-bottom: 117px;
+    }
+
+    @media (min-width: @lg-width) {
+      margin-bottom: 66px;
+      opacity: 0;
+      transform: translateY(130px);
+    }
+  }
+}

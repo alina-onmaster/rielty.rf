@@ -1,0 +1,135 @@
+.complexes {
+  &__list-wrap {
+    width: 100%;
+    overflow: hidden;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    @media (min-width: @lg-width) {
+      .container();
+    }
+  }
+
+  .swiper-wrapper {
+    @media (min-width: @lg-width) {
+      flex-wrap: wrap;
+    }
+  }
+
+
+  &__list {
+    .list();
+
+    @media (min-width: @lg-width) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+    }
+  }
+
+  & .swiper-slide {
+    height: auto;
+  }
+
+  &__item {
+    position: relative;
+    padding-left: 14px;
+    padding-right: 14px;
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: @md-width) {
+      padding-left: 102px;
+      padding-right: 102px;
+    }
+
+    @media (min-width: @lg-width) {
+      padding-left: 47px;
+      padding-right: 47px;
+
+
+
+      &:hover,
+      &:focus {
+        &::after {
+          transform: translateX(100%);
+        }
+
+        &::before {
+          transform: translateX(0);
+        }
+
+        & .complex {
+          &__title {
+
+            transform: translateY(0);
+
+            & span {
+              opacity: 1;
+              transform: translateY(0);
+            }
+          }
+
+          &__description {
+            opacity: 1;
+            transform: translateY(0);
+          }
+
+          &__detail-link {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+      }
+    }
+
+    &::after,
+    &::before {
+      content: "";
+      position: absolute;
+      width: 111px;
+      height: 26px;
+      background-image: url("../img/page/noize.jpg");
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      background-position: top center;
+      background-blend-mode: screen;
+      background-size: auto;
+      transition: @transition;
+      z-index: 2;
+
+      @media (min-width: @md-width) {
+        width: 280px;
+        height: 35px;
+      }
+    }
+
+    &::after {
+      top: -1px;
+      right: -1px;
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 20% 100%);
+
+      @media (min-width: @md-width) {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 17% 100%);
+      }
+    }
+
+    &::before {
+      display: none;
+      bottom: -1px;
+      left: -1px;
+      clip-path: polygon(0 0, 80% 0, 100% 100%, 0 100%);
+
+      @media (min-width: @md-width) {
+        clip-path: polygon(0 0, 83% 0, 100% 100%, 0 100%);
+      }
+
+      @media (min-width: @lg-width) {
+        display: block;
+        transform: translateX(-100%);
+      }
+    }
+  }
+}
