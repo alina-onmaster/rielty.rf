@@ -139,7 +139,7 @@
 }
 
 .text-3 (
-  @normal-font-size: 1rem;/*10px*/
+  @normal-font-size: 1,2rem;/*10px*/
   @normal-font-height: 1.3;
   @normal-font-weight: 400;
   @normal-font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif) {
@@ -185,7 +185,7 @@
 }
 
 .caption (
-  @mobile-font-size: 1rem;/*10px*/
+  @mobile-font-size: 1.2rem;/*10px*/
   @normal-font-size: 1.3rem;/*13px*/
   @normal-font-height: 1.4;
   @normal-font-weight: 400;
@@ -282,6 +282,20 @@
 .retina-bg2 (@bg-img: ""; @bs-width: auto; @bs-height: auto; @dppx: 3) {
   @media (min-resolution: unit((96 * (@dppx - 0.98) ),dpi)), (min-resolution: unit((@dppx - 0.98),dppx)) {
     background-image: url(@bg-img);
+    background-size: @bs-width @bs-height;
+  }
+}
+
+.retina-bg-linear-gradient (@bg-img-webp: ""; @bg-img: ""; @bs-width: auto; @bs-height: auto; @dppx: 2) {
+  @media (min-resolution: unit((96 * (@dppx - 0.98) ),dpi)), (min-resolution: unit((@dppx - 0.98),dppx)) {
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(@bg-img);
+    background-size: @bs-width @bs-height;
+  }
+}
+
+.retina-bg2-linear-gradient (@bg-img-webp: ""; @bg-img: ""; @bs-width: auto; @bs-height: auto; @dppx: 3) {
+  @media (min-resolution: unit((96 * (@dppx - 0.98) ),dpi)), (min-resolution: unit((@dppx - 0.98),dppx)) {
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(@bg-img);
     background-size: @bs-width @bs-height;
   }
 }
