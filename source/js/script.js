@@ -1,8 +1,9 @@
+/*Бургер-меню start*/
+
 let openMenuBtn = document.querySelector(".burger");
 let closeMenuBtn = document.querySelector(".main-nav__close-btn");
 let menu = document.querySelector(".main-nav");
 let windowWidth = document.documentElement.clientWidth;
-
 
 openMenuBtn.onclick = function () {
   if (windowWidth < 992) {
@@ -16,18 +17,9 @@ closeMenuBtn.onclick = function () {
   };
 };
 
+/*Бургер-меню end*/
 
-var complexesSlider = null;
-var mediaQuerySize = 768;
-
-function complexesSliderInit () {
-  if (!complexesSlider) {
-    complexesSlider = new Swiper('.complexes__swiper-container', {
-      slidesPerView: 1.08,
-      spaceBetween: 10,
-    });
-  }
-}
+/*Слайдер Каталог жилых комплексов start*/
 
 (function() {
 
@@ -104,3 +96,24 @@ function complexesSliderInit () {
 
 })(); /* IIFE end */
 
+/*Слайдер Каталог жилых комплексов end*/
+
+
+/*Каталог жилых комплексов одинаковая высота элементов start*/
+
+window.onload = function() {
+  setTimeout(function() {
+    var mainDivs = document.getElementsByClassName("complexes__item");  //Получаем все элементы с классом complexes__item
+    var maxHeight = 0;
+    for (var i = 0; i < mainDivs.length; ++i) {
+      if (maxHeight < mainDivs[i].clientHeight) { //Находим максимальную высоту
+        maxHeight = mainDivs[i].clientHeight;
+      }
+    }
+    for (var i = 0; i < mainDivs.length; ++i) {
+      mainDivs[i].style.height = maxHeight + "px"; //Устанавливаем всем элементам максимальную высоту
+    }
+  }, 1000);
+}
+
+/*Каталог жилых комплексов одинаковая высота элементов end*/

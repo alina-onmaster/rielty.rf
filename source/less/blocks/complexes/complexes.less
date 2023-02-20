@@ -33,23 +33,19 @@
 
   &__item {
     position: relative;
-    padding-left: 14px;
-    padding-right: 14px;
+    padding: 57px 14px 44px;
     overflow: hidden;
     height: 100%;
     display: flex;
     flex-direction: column;
+    box-sizing: border-box;
 
     @media (min-width: @md-width) {
-      padding-left: 102px;
-      padding-right: 102px;
+      padding: 102px;
     }
 
     @media (min-width: @lg-width) {
-      padding-left: 47px;
-      padding-right: 47px;
-
-
+      padding: 37px 47px 66px;
 
       &:hover,
       &:focus {
@@ -63,7 +59,6 @@
 
         & .complex {
           &__title {
-
             transform: translateY(0);
 
             & span {
@@ -91,7 +86,6 @@
       position: absolute;
       width: 111px;
       height: 26px;
-      background-image: url("../img/page/noize.jpg");
       background-attachment: fixed;
       background-repeat: no-repeat;
       background-position: top center;

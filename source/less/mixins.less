@@ -272,7 +272,7 @@
   transform: translate(-50%, @top-tr);
 }
 
-.retina-bg (@bg-img: ''; @bs-width: auto; @bs-height: auto; @dppx: 2) {
+.retina-bg (@bg-img: ""; @bs-width: auto; @bs-height: auto; @dppx: 2) {
   @media (min-resolution: unit((96 * (@dppx - 0.98) ),dpi)), (min-resolution: unit((@dppx - 0.98),dppx)) {
     background-image: url(@bg-img);
     background-size: @bs-width @bs-height;
