@@ -1,0 +1,27 @@
+.social {
+  &__list {
+    .list();
+    display: flex;
+    gap: 10px;
+  }
+  &__item a {
+    &:hover,
+    &:focus {
+      outline: none;
+
+      & .icon use.icon__symbol {
+        fill: @company-color;
+      }
+    }
+
+    & .icon {
+      display: block;
+      width: 19px;
+      height: 19px;
+
+      & use.icon__symbol {
+        fill: @dark;
+      }
+    }
+  }
+}

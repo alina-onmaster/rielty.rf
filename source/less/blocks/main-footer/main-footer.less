@@ -1,0 +1,156 @@
+.main-footer {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  color: @gray;
+
+  @media (min-width: @md-width) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  &__grid {
+    @media (min-width: @md-width) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas:
+      "nav contacts"
+      "other other";
+      column-gap: 20px;
+      row-gap: 40px;
+    }
+
+    @media (min-width: @lg-width) {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-areas:
+      "logo nav contacts contacts"
+      "other other other other";
+      column-gap: 30px;
+
+    }
+  }
+
+  & .logo {
+    display: none;
+
+    @media (min-width: @lg-width) {
+      display: block;
+      grid-area: logo;
+    }
+  }
+
+  &__nav {
+    @media (min-width: @md-width) {
+      grid-area: nav;
+    }
+  }
+
+  &__subtitle,
+  &__contacts dt {
+    .mp();
+    .text();
+    color: @dark;
+    margin-bottom: 15px;
+  }
+
+  &__contacts {
+    .mp();
+    margin-bottom: 25px;
+
+    @media (min-width: @md-width) {
+      grid-area: contacts;
+      margin-bottom: 0;
+    }
+
+    & dd {
+      .mp();
+      color: @gray;
+
+      & a {
+        &:hover,
+        &:focus {
+          color: @company-color;
+          outline-color: @company-color;
+        }
+      }
+    }
+  }
+
+  &__border-wrap {
+    position: relative;
+    padding-top: 15px;
+
+    @media (min-width: @md-width) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas:
+      "privacy-policy footnote"
+      "social .";
+      row-gap: 30px;
+      column-gap: 20px;
+      padding-top: 20px;
+      grid-area: other;
+    }
+
+    @media (min-width: @lg-width) {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-areas:
+      "social privacy-policy footnote .";
+      column-gap: 30px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 100vw;
+      height: 1px;
+      background-color: @gray;
+      transform: translateX(-50%);
+      opacity: 0.1;
+
+    }
+  }
+
+  & .social {
+    position: absolute;
+    margin-bottom: 49px;
+    top: -34px;
+    right: 0;
+    transform: translateY(-100%);
+
+    @media (min-width: @md-width) {
+      position: static;
+      top: unset;
+      right: unset;
+      transform: unset;
+      margin-bottom: 0;
+    }
+  }
+
+  & .privacy-policy-link {
+    position: relative;
+    .caption();
+    grid-area: privacy-policy;
+    margin-bottom: 5px;
+
+
+    &:hover,
+    &:focus {
+      color: @company-color;
+      text-decoration: underline;
+      outline: none;
+    }
+  }
+
+  & .footnote {
+    .caption();
+    .mp();
+    display: block;
+    grid-area: footnote;
+
+    &::before {
+      content: "*";
+    }
+  }
+}

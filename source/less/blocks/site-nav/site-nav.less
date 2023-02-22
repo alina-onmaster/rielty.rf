@@ -1,37 +1,68 @@
 .site-nav {
-  width: 100%;
-  margin-bottom: 20px;
-
-  @media (min-width: @lg-width) {
-    width: unset;
-    margin-bottom: 0;
-  }
   &__list {
     .list();
-
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    .descriptor();
-
-    @media (min-width: @lg-width) {
-      .navi-title();
-      flex-direction: row;
-      gap: 40px;
+  }
+  &__item a {
+    &:hover,
+    &:focus {
+      color: @company-color;
     }
   }
 
-  &__item {
-    text-align: center;
-  }
+}
 
-  &__item a {
-    display: block;
+.main-header {
+  & .site-nav {
     width: 100%;
-    padding: 10px;
+    margin-bottom: 20px;
 
     @media (min-width: @lg-width) {
       width: unset;
+      margin-bottom: 0;
+    }
+
+    &__list {
+      gap: 20px;
+      .descriptor();
+
+      @media (min-width: @lg-width) {
+        .navi-title();
+        flex-direction: row;
+        gap: 40px;
+      }
+    }
+
+    &__item {
+      text-align: center;
+    }
+
+    &__item a {
+      display: block;
+      width: 100%;
+      padding: 10px;
+
+      @media (min-width: @lg-width) {
+        width: unset;
+      }
     }
   }
+}
+
+.main-footer {
+  & .site-nav {
+    .mp();
+    margin-bottom: 30px;
+
+    @media (min-width: @md-width) {
+      margin-bottom: 0;
+    }
+
+    &__list {
+      gap: 5px;
+    }
+  }
+
+
 }
