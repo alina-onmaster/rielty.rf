@@ -286,14 +286,14 @@
   }
 }
 
-.retina-bg-linear-gradient (@bg-img-webp: ""; @bg-img: ""; @bs-width: auto; @bs-height: auto; @dppx: 2) {
+.retina-bg-linear-gradient (@bg-img: ""; @bs-width: auto; @bs-height: auto; @dppx: 2) {
   @media (min-resolution: unit((96 * (@dppx - 0.98) ),dpi)), (min-resolution: unit((@dppx - 0.98),dppx)) {
     background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(@bg-img);
     background-size: @bs-width @bs-height;
   }
 }
 
-.retina-bg2-linear-gradient (@bg-img-webp: ""; @bg-img: ""; @bs-width: auto; @bs-height: auto; @dppx: 3) {
+.retina-bg2-linear-gradient (@bg-img: ""; @bs-width: auto; @bs-height: auto; @dppx: 3) {
   @media (min-resolution: unit((96 * (@dppx - 0.98) ),dpi)), (min-resolution: unit((@dppx - 0.98),dppx)) {
     background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(@bg-img);
     background-size: @bs-width @bs-height;

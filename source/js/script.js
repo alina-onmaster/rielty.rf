@@ -65,6 +65,14 @@ closeMenuBtn.onclick = function () {
 
     complexesSlider = new Swiper ('.complexes__swiper-container', {
 
+      preloadImages: false,
+      lazy: {
+        loadOnTransitionStart: false,
+        loadPrevNext: false,
+      },
+      watchSlidesProgress: true,
+      watchSlidesVisibility: true,
+
 
       breakpoints: {
         // when window width is >= 320px
