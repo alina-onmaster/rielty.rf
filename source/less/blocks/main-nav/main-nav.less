@@ -11,6 +11,10 @@
   transition: @transition;
   transform: translateX(-100%);
 
+  @media (max-width: @mobile-width-only) {
+    display: none;
+  }
+
   @media (min-width: @lg-width) {
     position: static;
     top: unset;
@@ -26,6 +30,7 @@
   }
 
   &--opened {
+    display: block;
     transform: none;
   }
 
