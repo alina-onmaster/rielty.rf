@@ -186,7 +186,7 @@
     }
   }
 
-  & p {
+  &__philosophy-grid p {
     position: relative;
     .mp();
     .text();
@@ -377,6 +377,59 @@
       background-color: @company-color;
       z-index: -1;
 
+    }
+
+
+  }
+
+  &__leaders {
+    background-color: @light;
+    padding-top: 80px;
+    padding-bottom: 80px;
+
+    @media (min-width: @md-width) {
+      padding-top: 100px;
+      padding-bottom: 100px;
+    }
+
+    @media (min-width: @lg-width) {
+      padding-top: 140px;
+      padding-bottom: 140px;
+    }
+
+  }
+
+  &__other {
+    & .team__item.specialist {
+      display: none;
+
+      &:nth-child(-n+4) {
+        display: flex;
+      }
+
+      @media (min-width: @md-width) {
+        &:nth-child(-n+6) {
+          display: flex;
+        }
+      }
+
+      @media (min-width: @lg-width) {
+        display: flex;
+      }
+    }
+
+    & .team__grid {
+      @media (min-width: @lg-width) {
+        grid-template-areas:
+        "title main-text"
+        "list list";
+      }
+    }
+
+    & .team__link-more {
+      @media (min-width: @lg-width) {
+        display: none;
+      }
     }
 
 
