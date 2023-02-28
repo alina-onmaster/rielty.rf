@@ -1,0 +1,25 @@
+<section class="application application--form">
+  <div class="page__wrap application__wrap">
+    <h2 class="page__subtitle application__title">Получите бесплатную консультацию</h2>
+    <div class="application__description">
+      <p>Заполните форму, и мы свяжемся с вами в течение часа  для консультации по подбору первичной недвижимости</p>
+    </div>
+    <form class="application__form form">
+      <div class="form__fields">
+        <div class="form__field">
+          <input class="error" type="text" placeholder="Ваше ФИО*">
+          <span>Текст ошибки</span>
+        </div>
+        <div class="form__field">
+          <input type="tel" placeholder="Ваш телефон*">
+        </div>
+      </div>
+      <div class="form__field form__field--privacy-policy">
+        <input type="checkbox" id="privacy-policy" checked>
+        <label for="privacy-policy">Даю согласие на обработку <a href="privacy-policy.html">Персональных данных</a></label>
+      </div>
+      <button class="btn btn--light" type="submit">Заказать звонок</button>
+    </form>
+  </div>
+  <include src="./source/less/blocks/application/application__sent.html"></include>
+</section>

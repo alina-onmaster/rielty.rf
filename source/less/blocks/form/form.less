@@ -21,7 +21,7 @@
     }
   }
 
-  &__field--rivacy-policy {
+  &__field--privacy-policy {
     margin-bottom: 30px;
 
     @media (min-width: @md-width) {
@@ -80,9 +80,11 @@
       & a {
         position: relative;
 
+        &:hover,
         &:focus {
           outline: none;
           color: rgba(@light, 1);
+          text-decoration: none;
 
           &::before {
             background-color: rgba(@light, 1);
