@@ -8,13 +8,431 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="noindex, nofollow">
   </head>
-  <body class="page team">
+  <body class="page page--inner team">
     <div style="display:none">
       <include src="source/img/sprite.svg"></include>
     </div>
     <include src="./source/less/blocks/main-header/main-header--inner-page.html"></include>
     <main>
-      <include src="./source/less/blocks/team/team-page.html"></include>
+      <header class="team__header intro page__section">
+        <div class="page__wrap header__grid">
+          <h1 class="header__title">Меняем рынок недвижимости, <span>объединяя лучших</span></h1>
+          <div class="header__img-wrap">
+            <picture>
+              <source type="image/webp" srcset="
+            ./img/team/team-785@1x.webp 1x,
+            ./img/team/team-785@2x.webp 2x,
+            ./img/team/team-785@3x.webp 3x">
+              <source type="image/jpeg" srcset="
+            ./img/team/team-785@1x.jpg 1x,
+            ./img/team/team-785@2x.jpg 2x,
+            ./img/team/team-785@3x.jpg 3x">
+              <img class="header__img" src="./img/team/team-785@1x.jpg" alt="Наша команда">
+            </picture>
+          </div>
+        </div>
+      </header>
+      <section class="team__philosophy page__section">
+        <div class="page__wrap">
+          <div class="team__philosophy-grid">
+            <h2 class="page__subtitle team__philosophy-title">Философия</h2>
+            <p>Мы активные и молодые, развиваем культуру продаж на риэлторском рынке, создаём новые услуги и сервисы, чтобы сделать жизнь клиентов комфортнее, а рынок технологичнее</p>
+            <p>Rielty больше, чем агентство недвижимости. Это целая экосистема, оказывающая все виды услуг, начиная с подбора недвижимости, заканчивая аналитикой рынка и созданием комплексных цифровых продуктов</p>
+            <p>Честный экспертный подход и высокий сервис — наши основные принципы работы с клиентами. Агентам даём платформу для старта карьеры, создания имиджа и повышения экспертности</p>
+          </div>
+        </div>
+      </section>
+      <section class="team__advantages">
+        <div class="page__wrap">
+          <h2 class="page__subtitle">Преимущества</h2>
+          <div class="team__advantages-list">
+            <div class="team__advantages-item">
+              <svg class="icon" width="48" height="48">
+                <use class="icon__symbol" xlink:href="#icon-team-service"></use>
+              </svg>
+              Развиваем культуру продаж и сервис риэлторского рынка
+              <span class="border"></span>
+            </div>
+            <div class="team__advantages-item">
+              <svg class="icon" width="48" height="48">
+                <use class="icon__symbol" xlink:href="#icon-team-partner"></use>
+              </svg>
+              Выстраиваем честные партнёрские отношения
+              <span class="border"></span>
+            </div>
+            <div class="team__advantages-item">
+              <svg class="icon" width="48" height="48">
+                <use class="icon__symbol" xlink:href="#icon-team-standarts"></use>
+              </svg>
+              Задаём стандарты качества работы с клиентом / продуктом
+              <span class="border"></span>
+            </div>
+            <div class="team__advantages-item">
+              <svg class="icon" width="48" height="48">
+                <use class="icon__symbol" xlink:href="#icon-team-expert"></use>
+              </svg>
+              Сделаем из тебя эксперта по недвижимости
+              <span class="border"></span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="team__leaders page__section">
+        <div class="page__wrap team__grid">
+          <h2 class="page__subtitle">Руководители</h2>
+          <ul class="team__list">
+            <li class="team__item specialist">
+              <h3 class="specialist__name">Айнур Рахмаев</h3>
+              <p class="specialist__position">Директор</p>
+              <div class="specialist__img-wrap">
+                <picture>
+                  <source type="image/webp" srcset="
+            ./img/team/ajnur-rahmaev-750@1x.webp 1x,
+            ./img/team/ajnur-rahmaev-750@2x.webp 2x,
+            ./img/team/ajnur-rahmaev-750@3x.webp 3x">
+                  <source type="image/jpeg" srcset="
+            ./img/team/ajnur-rahmaev-750@1x.jpg 1x,
+            ./img/team/ajnur-rahmaev-750@2x.jpg 2x,
+            ./img/team/ajnur-rahmaev-750@3x.jpg 3x">
+                  <img loading="lazy" class="specialist__img" src="./img/team/ajnur-rahmaev-750@1x.jpg" alt="Айнур Рахмаев">
+                </picture>
+              </div>
+            </li>
+            <li class="team__item specialist">
+              <h3 class="specialist__name">Ринат Гаризов</h3>
+              <p class="specialist__position">Руководитель первичного направления</p>
+              <div class="specialist__img-wrap">
+                <picture>
+                  <source type="image/webp" srcset="
+            ./img/team/rinat-garizov-750@1x.webp 1x,
+            ./img/team/rinat-garizov-750@2x.webp 2x,
+            ./img/team/rinat-garizov-750@3x.webp 3x">
+                  <source type="image/jpeg" srcset="
+            ./img/team/rinat-garizov-750@1x.jpg 1x,
+            ./img/team/rinat-garizov-750@2x.jpg 2x,
+            ./img/team/rinat-garizov-750@3x.jpg 3x">
+                  <img loading="lazy" class="specialist__img" src="./img/team/rinat-garizov-750@1x.jpg" alt="Айнур Рахмаев">
+                </picture>
+              </div>
+            </li>
+            <li class="team__item specialist">
+              <h3 class="specialist__name">Алёна Малютина</h3>
+              <p class="specialist__position">Руководитель вторичного направления</p>
+              <div class="specialist__img-wrap">
+                <picture>
+                  <source type="image/webp" srcset="
+            ./img/team/alyona-malyutina-750@1x.webp 1x,
+            ./img/team/alyona-malyutina-750@2x.webp 2x,
+            ./img/team/alyona-malyutina-750@3x.webp 3x">
+                  <source type="image/jpeg" srcset="
+            ./img/team/alyona-malyutina-750@1x.jpg 1x,
+            ./img/team/alyona-malyutina-750@2x.jpg 2x,
+            ./img/team/alyona-malyutina-750@3x.jpg 3x">
+                  <img loading="lazy" class="specialist__img" src="./img/team/alyona-malyutina-750@1x.jpg" alt="Айнур Рахмаев">
+                </picture>
+              </div>
+            </li>
+            <li class="team__item specialist">
+              <h3 class="specialist__name">Ильнур Сулейманов</h3>
+              <p class="specialist__position">Руководитель отдела продаж</p>
+              <div class="specialist__img-wrap">
+                <picture>
+                  <source type="image/webp" srcset="
+            ./img/team/sulejmanov-ilnur-750@1x.webp 1x,
+            ./img/team/sulejmanov-ilnur-750@2x.webp 2x,
+            ./img/team/sulejmanov-ilnur-750@3x.webp 3x">
+                  <source type="image/jpeg" srcset="
+            ./img/team/sulejmanov-ilnur-750@1x.jpg 1x,
+            ./img/team/sulejmanov-ilnur-750@2x.jpg 2x,
+            ./img/team/sulejmanov-ilnur-750@3x.jpg 3x">
+                  <img loading="lazy" class="specialist__img" src="./img/team/sulejmanov-ilnur-750@1x.jpg" alt="Айнур Рахмаев">
+                </picture>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="team__other page__section">
+        <div class="page__wrap team__grid">
+          <h2 class="page__subtitle">Наша команда</h2>
+          <ul class="team__list">
+            <li class="team__item specialist">
+              <h3 class="specialist__name">Айнур Рахмаев</h3>
+              <p class="specialist__position">Директор</p>
+              <div class="specialist__img-wrap">
+                <picture>
+                  <source type="image/webp" srcset="
+            ./img/team/ajnur-rahmaev-750@1x.webp 1x,
+            ./img/team/ajnur-rahmaev-750@2x.webp 2x,
+            ./img/team/ajnur-rahmaev-750@3x.webp 3x">
+                  <source type="image/jpeg" srcset="
+            ./img/team/ajnur-rahmaev-750@1x.jpg 1x,
+            ./img/team/ajnur-rahmaev-750@2x.jpg 2x,
+            ./img/team/ajnur-rahmaev-750@3x.jpg 3x">
+                  <img loading="lazy" class="specialist__img" src="./img/team/ajnur-rahmaev-750@1x.jpg" alt="Айнур Рахмаев">
+                </picture>
+              </div>
+            </li>
+            <li class="team__item specialist">
+              <h3 class="specialist__name">Ринат Гаризов</h3>
+              <p class="specialist__position">Руководитель первичного направления</p>
+              <div class="specialist__img-wrap">
+                <picture>
+                  <source type="image/webp" srcset="
+            ./img/team/rinat-garizov-750@1x.webp 1x,
+            ./img/team/rinat-garizov-750@2x.webp 2x,
+            ./img/team/rinat-garizov-750@3x.webp 3x">
+                  <source type="image/jpeg" srcset="
+            ./img/team/rinat-garizov-750@1x.jpg 1x,
+            ./img/team/rinat-garizov-750@2x.jpg 2x,
+            ./img/team/rinat-garizov-750@3x.jpg 3x">
+                  <img loading="lazy" class="specialist__img" src="./img/team/rinat-garizov-750@1x.jpg" alt="Айнур Рахмаев">
+                </picture>
+              </div>
+            </li>
+            <li class="team__item specialist">
+              <h3 class="specialist__name">Алёна Малютина</h3>
+              <p class="specialist__position">Руководитель вторичного направления</p>
+              <div class="specialist__img-wrap">
+                <picture>
+                  <source type="image/webp" srcset="
+            ./img/team/alyona-malyutina-750@1x.webp 1x,
+            ./img/team/alyona-malyutina-750@2x.webp 2x,
+            ./img/team/alyona-malyutina-750@3x.webp 3x">
+                  <source type="image/jpeg" srcset="
+            ./img/team/alyona-malyutina-750@1x.jpg 1x,
+            ./img/team/alyona-malyutina-750@2x.jpg 2x,
+            ./img/team/alyona-malyutina-750@3x.jpg 3x">
+                  <img loading="lazy" class="specialist__img" src="./img/team/alyona-malyutina-750@1x.jpg" alt="Айнур Рахмаев">
+                </picture>
+              </div>
+            </li>
+            <li class="team__item specialist">
+              <h3 class="specialist__name">Ильнур Сулейманов</h3>
+              <p class="specialist__position">Руководитель отдела продаж</p>
+              <div class="specialist__img-wrap">
+                <picture>
+                  <source type="image/webp" srcset="
+            ./img/team/sulejmanov-ilnur-750@1x.webp 1x,
+            ./img/team/sulejmanov-ilnur-750@2x.webp 2x,
+            ./img/team/sulejmanov-ilnur-750@3x.webp 3x">
+                  <source type="image/jpeg" srcset="
+            ./img/team/sulejmanov-ilnur-750@1x.jpg 1x,
+            ./img/team/sulejmanov-ilnur-750@2x.jpg 2x,
+            ./img/team/sulejmanov-ilnur-750@3x.jpg 3x">
+                  <img loading="lazy" class="specialist__img" src="./img/team/sulejmanov-ilnur-750@1x.jpg" alt="Айнур Рахмаев">
+                </picture>
+              </div>
+            </li>
+            <li class="team__item specialist">
+              <h3 class="specialist__name">Ринат Гаризов</h3>
+              <p class="specialist__position">Руководитель первичного направления</p>
+              <div class="specialist__img-wrap">
+                <picture>
+                  <source type="image/webp" srcset="
+            ./img/team/rinat-garizov-750@1x.webp 1x,
+            ./img/team/rinat-garizov-750@2x.webp 2x,
+            ./img/team/rinat-garizov-750@3x.webp 3x">
+                  <source type="image/jpeg" srcset="
+            ./img/team/rinat-garizov-750@1x.jpg 1x,
+            ./img/team/rinat-garizov-750@2x.jpg 2x,
+            ./img/team/rinat-garizov-750@3x.jpg 3x">
+                  <img loading="lazy" class="specialist__img" src="./img/team/rinat-garizov-750@1x.jpg" alt="Айнур Рахмаев">
+                </picture>
+              </div>
+            </li>
+            <li class="team__item specialist">
+              <h3 class="specialist__name">Алёна Малютина</h3>
+              <p class="specialist__position">Руководитель вторичного направления</p>
+              <div class="specialist__img-wrap">
+                <picture>
+                  <source type="image/webp" srcset="
+            ./img/team/alyona-malyutina-750@1x.webp 1x,
+            ./img/team/alyona-malyutina-750@2x.webp 2x,
+            ./img/team/alyona-malyutina-750@3x.webp 3x">
+                  <source type="image/jpeg" srcset="
+            ./img/team/alyona-malyutina-750@1x.jpg 1x,
+            ./img/team/alyona-malyutina-750@2x.jpg 2x,
+            ./img/team/alyona-malyutina-750@3x.jpg 3x">
+                  <img loading="lazy" class="specialist__img" src="./img/team/alyona-malyutina-750@1x.jpg" alt="Айнур Рахмаев">
+                </picture>
+              </div>
+            </li>
+            <li class="team__item specialist">
+              <h3 class="specialist__name">Ильнур Сулейманов</h3>
+              <p class="specialist__position">Руководитель отдела продаж</p>
+              <div class="specialist__img-wrap">
+                <picture>
+                  <source type="image/webp" srcset="
+            ./img/team/sulejmanov-ilnur-750@1x.webp 1x,
+            ./img/team/sulejmanov-ilnur-750@2x.webp 2x,
+            ./img/team/sulejmanov-ilnur-750@3x.webp 3x">
+                  <source type="image/jpeg" srcset="
+            ./img/team/sulejmanov-ilnur-750@1x.jpg 1x,
+            ./img/team/sulejmanov-ilnur-750@2x.jpg 2x,
+            ./img/team/sulejmanov-ilnur-750@3x.jpg 3x">
+                  <img loading="lazy" class="specialist__img" src="./img/team/sulejmanov-ilnur-750@1x.jpg" alt="Айнур Рахмаев">
+                </picture>
+              </div>
+            </li>
+            <li class="team__item specialist">
+              <h3 class="specialist__name">Айнур Рахмаев</h3>
+              <p class="specialist__position">Директор</p>
+              <div class="specialist__img-wrap">
+                <picture>
+                  <source type="image/webp" srcset="
+            ./img/team/ajnur-rahmaev-750@1x.webp 1x,
+            ./img/team/ajnur-rahmaev-750@2x.webp 2x,
+            ./img/team/ajnur-rahmaev-750@3x.webp 3x">
+                  <source type="image/jpeg" srcset="
+            ./img/team/ajnur-rahmaev-750@1x.jpg 1x,
+            ./img/team/ajnur-rahmaev-750@2x.jpg 2x,
+            ./img/team/ajnur-rahmaev-750@3x.jpg 3x">
+                  <img loading="lazy" class="specialist__img" src="./img/team/ajnur-rahmaev-750@1x.jpg" alt="Айнур Рахмаев">
+                </picture>
+              </div>
+            </li>
+            <li class="team__item specialist">
+              <h3 class="specialist__name">Алёна Малютина</h3>
+              <p class="specialist__position">Руководитель вторичного направления</p>
+              <div class="specialist__img-wrap">
+                <picture>
+                  <source type="image/webp" srcset="
+            ./img/team/alyona-malyutina-750@1x.webp 1x,
+            ./img/team/alyona-malyutina-750@2x.webp 2x,
+            ./img/team/alyona-malyutina-750@3x.webp 3x">
+                  <source type="image/jpeg" srcset="
+            ./img/team/alyona-malyutina-750@1x.jpg 1x,
+            ./img/team/alyona-malyutina-750@2x.jpg 2x,
+            ./img/team/alyona-malyutina-750@3x.jpg 3x">
+                  <img loading="lazy" class="specialist__img" src="./img/team/alyona-malyutina-750@1x.jpg" alt="Айнур Рахмаев">
+                </picture>
+              </div>
+            </li>
+            <li class="team__item specialist">
+              <h3 class="specialist__name">Ильнур Сулейманов</h3>
+              <p class="specialist__position">Руководитель отдела продаж</p>
+              <div class="specialist__img-wrap">
+                <picture>
+                  <source type="image/webp" srcset="
+            ./img/team/sulejmanov-ilnur-750@1x.webp 1x,
+            ./img/team/sulejmanov-ilnur-750@2x.webp 2x,
+            ./img/team/sulejmanov-ilnur-750@3x.webp 3x">
+                  <source type="image/jpeg" srcset="
+            ./img/team/sulejmanov-ilnur-750@1x.jpg 1x,
+            ./img/team/sulejmanov-ilnur-750@2x.jpg 2x,
+            ./img/team/sulejmanov-ilnur-750@3x.jpg 3x">
+                  <img loading="lazy" class="specialist__img" src="./img/team/sulejmanov-ilnur-750@1x.jpg" alt="Айнур Рахмаев">
+                </picture>
+              </div>
+            </li>
+            <li class="team__item specialist">
+              <h3 class="specialist__name">Ринат Гаризов</h3>
+              <p class="specialist__position">Руководитель первичного направления</p>
+              <div class="specialist__img-wrap">
+                <picture>
+                  <source type="image/webp" srcset="
+            ./img/team/rinat-garizov-750@1x.webp 1x,
+            ./img/team/rinat-garizov-750@2x.webp 2x,
+            ./img/team/rinat-garizov-750@3x.webp 3x">
+                  <source type="image/jpeg" srcset="
+            ./img/team/rinat-garizov-750@1x.jpg 1x,
+            ./img/team/rinat-garizov-750@2x.jpg 2x,
+            ./img/team/rinat-garizov-750@3x.jpg 3x">
+                  <img loading="lazy" class="specialist__img" src="./img/team/rinat-garizov-750@1x.jpg" alt="Айнур Рахмаев">
+                </picture>
+              </div>
+            </li>
+            <li class="team__item specialist">
+              <h3 class="specialist__name">Алёна Малютина</h3>
+              <p class="specialist__position">Руководитель вторичного направления</p>
+              <div class="specialist__img-wrap">
+                <picture>
+                  <source type="image/webp" srcset="
+            ./img/team/alyona-malyutina-750@1x.webp 1x,
+            ./img/team/alyona-malyutina-750@2x.webp 2x,
+            ./img/team/alyona-malyutina-750@3x.webp 3x">
+                  <source type="image/jpeg" srcset="
+            ./img/team/alyona-malyutina-750@1x.jpg 1x,
+            ./img/team/alyona-malyutina-750@2x.jpg 2x,
+            ./img/team/alyona-malyutina-750@3x.jpg 3x">
+                  <img loading="lazy" class="specialist__img" src="./img/team/alyona-malyutina-750@1x.jpg" alt="Айнур Рахмаев">
+                </picture>
+              </div>
+            </li>
+            <li class="team__item specialist">
+              <h3 class="specialist__name">Ильнур Сулейманов</h3>
+              <p class="specialist__position">Руководитель отдела продаж</p>
+              <div class="specialist__img-wrap">
+                <picture>
+                  <source type="image/webp" srcset="
+            ./img/team/sulejmanov-ilnur-750@1x.webp 1x,
+            ./img/team/sulejmanov-ilnur-750@2x.webp 2x,
+            ./img/team/sulejmanov-ilnur-750@3x.webp 3x">
+                  <source type="image/jpeg" srcset="
+            ./img/team/sulejmanov-ilnur-750@1x.jpg 1x,
+            ./img/team/sulejmanov-ilnur-750@2x.jpg 2x,
+            ./img/team/sulejmanov-ilnur-750@3x.jpg 3x">
+                  <img loading="lazy" class="specialist__img" src="./img/team/sulejmanov-ilnur-750@1x.jpg" alt="Айнур Рахмаев">
+                </picture>
+              </div>
+            </li>
+            <li class="team__item specialist">
+              <h3 class="specialist__name">Айнур Рахмаев</h3>
+              <p class="specialist__position">Директор</p>
+              <div class="specialist__img-wrap">
+                <picture>
+                  <source type="image/webp" srcset="
+            ./img/team/ajnur-rahmaev-750@1x.webp 1x,
+            ./img/team/ajnur-rahmaev-750@2x.webp 2x,
+            ./img/team/ajnur-rahmaev-750@3x.webp 3x">
+                  <source type="image/jpeg" srcset="
+            ./img/team/ajnur-rahmaev-750@1x.jpg 1x,
+            ./img/team/ajnur-rahmaev-750@2x.jpg 2x,
+            ./img/team/ajnur-rahmaev-750@3x.jpg 3x">
+                  <img loading="lazy" class="specialist__img" src="./img/team/ajnur-rahmaev-750@1x.jpg" alt="Айнур Рахмаев">
+                </picture>
+              </div>
+            </li>
+            <li class="team__item specialist">
+              <h3 class="specialist__name">Алёна Малютина</h3>
+              <p class="specialist__position">Руководитель вторичного направления</p>
+              <div class="specialist__img-wrap">
+                <picture>
+                  <source type="image/webp" srcset="
+            ./img/team/alyona-malyutina-750@1x.webp 1x,
+            ./img/team/alyona-malyutina-750@2x.webp 2x,
+            ./img/team/alyona-malyutina-750@3x.webp 3x">
+                  <source type="image/jpeg" srcset="
+            ./img/team/alyona-malyutina-750@1x.jpg 1x,
+            ./img/team/alyona-malyutina-750@2x.jpg 2x,
+            ./img/team/alyona-malyutina-750@3x.jpg 3x">
+                  <img loading="lazy" class="specialist__img" src="./img/team/alyona-malyutina-750@1x.jpg" alt="Айнур Рахмаев">
+                </picture>
+              </div>
+            </li>
+            <li class="team__item specialist">
+              <h3 class="specialist__name">Ильнур Сулейманов</h3>
+              <p class="specialist__position">Руководитель отдела продаж</p>
+              <div class="specialist__img-wrap">
+                <picture>
+                  <source type="image/webp" srcset="
+            ./img/team/sulejmanov-ilnur-750@1x.webp 1x,
+            ./img/team/sulejmanov-ilnur-750@2x.webp 2x,
+            ./img/team/sulejmanov-ilnur-750@3x.webp 3x">
+                  <source type="image/jpeg" srcset="
+            ./img/team/sulejmanov-ilnur-750@1x.jpg 1x,
+            ./img/team/sulejmanov-ilnur-750@2x.jpg 2x,
+            ./img/team/sulejmanov-ilnur-750@3x.jpg 3x">
+                  <img loading="lazy" class="specialist__img" src="./img/team/sulejmanov-ilnur-750@1x.jpg" alt="Айнур Рахмаев">
+                </picture>
+              </div>
+            </li>
+          </ul>
+          <a class="btn btn--transparent team__link-more" href="!#">Показать еще</a>
+        </div>
+      </section>
+      <include src="./source/less/blocks/application/application__join-the-team.html"></include>
     </main>
     <include src="./source/less/blocks/main-footer/main-footer--inner-page.html"></include>
     <include src="./source/less/blocks/js/js.html"></include>

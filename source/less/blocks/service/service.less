@@ -1,5 +1,129 @@
-.service {
+& .service {
+  &__header {
+    margin-top: 50px;
+    margin-bottom: 40px;
 
+    @media (min-width: @md-width) {
+      margin-top: 20px;
+    }
+
+    @media (min-width: @xl-width) {
+      margin-top: 10px;/*90px*/
+    }
+  }
+  &__nav {
+    margin-bottom: 35px;
+
+    @media (min-width: @md-width) {
+      margin-bottom: 30px;
+    }
+
+    @media (min-width: @xl-width) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__nav-select {
+    display: block;
+    .mp();
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 16px 15px;
+    width: 100%;
+    border: 1px solid @dark;
+    background: transparent;
+    .text();
+    transition: @transition;
+    margin-bottom: 35px;
+
+    @media (min-width: @md-width) {
+      margin-bottom: 29px;
+      padding: 19px 20px;
+    }
+
+    @media (min-width: @xl-width) {
+      display: none;
+    }
+
+    &:focus {
+      outline-color: @company-color;
+    }
+
+    & option {
+      background-color: @light;
+      color: @gray;
+      .field-title();
+    }
+  }
+
+  &__nav-list {
+    display: none;
+
+    @media (min-width: @xl-width) {
+      position: relative;
+      .list();
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      color: @gray-light;
+      .text();
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 1px;
+        background-color: @gray-light;
+      }
+    }
+  }
+
+  &__nav-item {
+    &.active {
+      color: @dark;
+      font-weight: 700;
+
+      & a {
+        &::before {
+          width: 100%;
+          background-color: @dark;
+        }
+      }
+    }
+  }
+
+  &__nav-item a {
+    display: block;
+    position: relative;
+    color: inherit;
+    padding: 5px 0;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      width: 0;
+      height: 1px;
+      background-color: @gray-light;
+      transform: translateX(-50%);
+      transition: @transition;
+    }
+
+    &:hover,
+    &:focus {
+      outline: none;
+      color: @dark;
+      text-decoration: none;
+
+      &::before {
+        width: 100%;
+        background-color: @dark;
+      }
+    }
+  }
 }
 
 .services__list .service {

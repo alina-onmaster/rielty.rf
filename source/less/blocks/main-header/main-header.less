@@ -53,6 +53,10 @@
       & .phone-number {
         .navi-title();
         padding: 10px;
+
+        @media (min-width: @lg-width) {
+          padding: 0;
+        }
       }
     }
 
@@ -67,6 +71,25 @@
     & .icon {
       width: 25px;
       height: 20px;
+    }
+  }
+}
+
+.page--inner {
+  & .main-header {
+    &__wrap {
+      padding-top: 20px;
+      padding-bottom: 20px;
+
+      @media (min-width: @md-width) {
+        padding-top: 10px;
+        padding-bottom: 10px;
+      }
+
+      @media (min-width: @md-width) {
+        padding-top: 30px;
+        padding-bottom: 20px;
+      }
     }
   }
 }
