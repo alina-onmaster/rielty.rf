@@ -106,7 +106,6 @@ closeMenuBtn.onclick = function () {
 
 /*Слайдер Каталог жилых комплексов end*/
 
-
 /*Каталог жилых комплексов одинаковая высота элементов start*/
 
 window.onload = function() {
@@ -125,3 +124,45 @@ window.onload = function() {
 }
 
 /*Каталог жилых комплексов одинаковая высота элементов end*/
+
+/*Слайдер Отзывы start*/
+new Swiper('.reviews__swiper-container',{
+  preloadImages: false,
+  lazy: {
+    loadOnTransitionStart: false,
+    loadPrevNext: false,
+  },
+  watchSlidesProgress: true,
+  watchSlidesVisibility: true,
+
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+  slidesPerView: 1,
+
+  breakpoints: {
+    // when window width is >= 320px
+    320: {
+      slidesPerView: 1.08,
+      spaceBetween: 10,
+    },
+    // when window width is >= 768px
+    768: {
+      slidesPerView: 1.25,
+      spaceBetween: 30,
+    },
+
+    1200: {
+      slidesPerView: 2.3,
+      spaceBetween: 30,
+    },
+
+    2000: {
+      slidesPerView: 2,
+      spaceBetween: 30,
+    },
+  }
+
+});
+/*Слайдер Отзывы end*/

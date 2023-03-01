@@ -1,3 +1,81 @@
 .review {
+  &__author {
+    .mp();
+    .h4();
+    margin-bottom: 30px;
+
+    @media (min-width: @md-width) {
+      .text();
+      margin-bottom: 73px;
+    }
+
+    & span {
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: -30px;
+        width: 20px;
+        height: 20px;
+        background: center / contain no-repeat url("../img/reviews/2gis.svg");
+        transform: translateY(-50%);
+
+        @media (min-width: @md-width) {
+          right: -35px;
+        }
+      }
+    }
+  }
+
+  &__preview {
+    .mp();
+    .text-2();
+    color: @gray;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    line-clamp: 10;
+    -webkit-line-clamp: 10;
+    box-orient: vertical;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    overflow: hidden;
+    margin-bottom: 10px;
+
+    @media (min-width: @md-width) {
+      line-clamp: 4;
+      -webkit-line-clamp: 4;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__link-more {
+    position: relative;
+    .text();
+    text-transform: uppercase;
+    color: @dark;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      background-color: @dark;
+      left: 0;
+      bottom: -1px;
+      transition: @transition;
+    }
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+      color: @company-color;
+
+      &::before {
+        background-color: @company-color;
+      }
+    }
+  }
 
 }
