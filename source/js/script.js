@@ -166,3 +166,11 @@ new Swiper('.reviews__swiper-container',{
 
 });
 /*Слайдер Отзывы end*/
+
+// Политика конфиденциальных данных
+$(document).ready(function () {
+  $('.privacy-policy__chapter-title').click(function () {
+    $(this).toggleClass('privacy-policy__chapter-title--in').next().slideToggle();
+    $('.privacy-policy__chapter-title').not(this).removeClass('privacy-policy__chapter-title--in').next().slideUp();
+  });
+});
