@@ -1,4 +1,7 @@
 .site-nav {
+  &__title {
+    display: none;
+  }
   &__list {
     .list();
     display: flex;
@@ -54,15 +57,25 @@
 
 .main-footer {
   & .site-nav {
+
     .mp();
     margin-bottom: 30px;
 
     @media (min-width: @md-width) {
       margin-bottom: 0;
+      grid-area: nav;
     }
 
     &__list {
       gap: 5px;
+    }
+
+    &__title {
+      display: block;
+      .mp();
+      .text();
+      color: @dark;
+      margin-bottom: 15px;
     }
   }
 

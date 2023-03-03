@@ -1,14 +1,26 @@
 .partners {
+  & .simple-marquee-container {
+    background-color: transparent;
+    height: 60px;
+    float: unset;
+
+    @media (min-width: @md-width) {
+      height: 90px;
+    }
+
+  }
+
+  & .marquee-content-items {
+    padding: 0;
+
+  }
+
   &__list {
     .list();
+  }
 
-    &--right {
-      margin-bottom: 10px;
-
-      @media (min-width: @md-width) {
-        margin-bottom: 30px;
-      }
-    }
+  &__item {
+    display: inline-block;
   }
 
   &__item a {
