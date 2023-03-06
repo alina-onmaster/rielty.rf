@@ -1,29 +1,8 @@
 .application {
-  position: relative;
-  background-color: @company-color;
-  background-blend-mode: screen;
-  color: @light;
 
   &--form {
     & .application-sent {
       display: none;
-    }
-
-    @media (min-width: @md-width) {
-      background-image: url("../img/form/town.svg");
-      background-repeat: repeat-x;
-      background-position: center bottom -36px;
-      background-size: 120% auto;
-    }
-
-    @media (min-width: @lg-width) {
-      background-position: center 120px bottom -74px;
-      background-size: auto;
-    }
-
-    @media (min-width: @xl-width) {
-      background-repeat: no-repeat;
-      background-position: left -13px bottom -74px;
     }
   }
 
@@ -33,198 +12,384 @@
     }
   }
 
-  &::after {
-    content: "";
+  & .application-sent {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    opacity: 0.1;
-    background-attachment: fixed;
-    background-position: top center;
-    background-repeat: repeat;
+    background-color: @company-color;
+    color: @light;
+    z-index: 5;
+    align-items: center;
+
+    @media (min-width: @lg-width) {
+      align-items: flex-start;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0.1;
+      background-attachment: fixed;
+      background-position: top center;
+      background-repeat: repeat;
+    }
+
+    &__wrap {
+      position: relative;
+      padding-top: 40px;
+      padding-bottom: 40px;
+      z-index: 5;
+
+      @media (min-width: @md-width) {
+        padding-top: 50px;
+        padding-bottom: 50px;
+      }
+
+      @media (min-width: @lg-width) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 30px;
+        grid-template-areas:
+      "title description"
+      ". description";
+      }
+    }
+
+    &__title {
+      text-align: center;
+      margin-bottom: 15px;
+
+      @media (min-width: @md-width) {
+        width: 100%;
+        max-width: 585px;
+        margin: 0 auto;
+        margin-bottom: 20px;
+      }
+
+      @media (min-width: @lg-width) {
+        margin-bottom: 0;
+        text-align: left;
+        grid-area: title;
+      }
+    }
+
+    &__description {
+      .text();
+      text-align: center;
+      margin-bottom: 25px;
+
+      @media (min-width: @md-width) {
+        width: 100%;
+        max-width: 585px;
+        margin: 0 auto;
+        margin-bottom: 40px;
+      }
+
+      @media (min-width: @lg-width) {
+        & p:first-child {
+          margin-top: 0;
+        }
+
+        margin-bottom: 0;
+        text-align: left;
+        grid-area: description;
+      }
+    }
+
+    & .btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      max-width: 300px;
+      margin: 0 auto;
+
+      @media (min-width: @md-width) {
+        max-width: 585px;
+      }
+    }
   }
 
   &__wrap {
     position: relative;
-    z-index: 5;
-    padding-top: 40px;
-    padding-bottom: 40px;
+  }
 
-    @media (min-width: @md-width) {
-      padding-top: 50px;
-      padding-bottom: 50px;
+  &__title {
+    text-align: center;
+  }
+
+  &__description {
+    text-align: center;
+  }
+}
+
+.page__section {
+  &.application {
+    position: relative;
+    background-color: @company-color;
+    background-blend-mode: screen;
+    color: @light;
+
+    &--form {
+
+
+      @media (min-width: @md-width) {
+        background-image: url("../img/form/town.svg");
+        background-repeat: repeat-x;
+        background-position: center bottom -36px;
+        background-size: 120% auto;
+      }
+
+      @media (min-width: @lg-width) {
+        background-position: center 120px bottom -74px;
+        background-size: auto;
+      }
+
+      @media (min-width: @xl-width) {
+        background-repeat: no-repeat;
+        background-position: left -13px bottom -74px;
+      }
     }
 
-    @media (min-width: @lg-width) {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      column-gap: 30px;
-      grid-template-areas:
+    & .application-sent {
+      z-index: 5;
+      align-items: center;
+
+      @media (min-width: @lg-width) {
+        align-items: flex-start;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.1;
+        background-attachment: fixed;
+        background-position: top center;
+        background-repeat: repeat;
+      }
+
+      &__wrap {
+        position: relative;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        z-index: 5;
+
+        @media (min-width: @md-width) {
+          padding-top: 50px;
+          padding-bottom: 50px;
+        }
+
+        @media (min-width: @lg-width) {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          column-gap: 30px;
+          grid-template-areas:
+      "title description"
+      ". description";
+        }
+      }
+
+      &__title {
+        text-align: center;
+        margin-bottom: 15px;
+
+        @media (min-width: @md-width) {
+          width: 100%;
+          max-width: 585px;
+          margin: 0 auto;
+          margin-bottom: 20px;
+        }
+
+        @media (min-width: @lg-width) {
+          margin-bottom: 0;
+          text-align: left;
+          grid-area: title;
+        }
+      }
+
+      &__description {
+        .text();
+        text-align: center;
+        margin-bottom: 25px;
+
+        @media (min-width: @md-width) {
+          width: 100%;
+          max-width: 585px;
+          margin: 0 auto;
+          margin-bottom: 40px;
+        }
+
+        @media (min-width: @lg-width) {
+          & p:first-child {
+            margin-top: 0;
+          }
+
+          margin-bottom: 0;
+          text-align: left;
+          grid-area: description;
+        }
+      }
+
+      & .btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+
+        @media (min-width: @md-width) {
+          max-width: 585px;
+        }
+      }
+    }
+
+
+  }
+
+  & .application {
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0.1;
+      background-attachment: fixed;
+      background-position: top center;
+      background-repeat: repeat;
+    }
+
+    &__wrap {
+      z-index: 5;
+      padding-top: 40px;
+      padding-bottom: 40px;
+
+      @media (min-width: @md-width) {
+        padding-top: 50px;
+        padding-bottom: 50px;
+      }
+
+      @media (min-width: @lg-width) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 30px;
+        grid-template-areas:
       "title description"
       ". description"
       ". form";
-    }
-  }
-
-  &__title {
-    text-align: center;
-    margin-bottom: 15px;
-
-    @media (min-width: @md-width) {
-      width: 100%;
-      max-width: 585px;
-      margin: 0 auto;
-      margin-bottom: 20px;
-    }
-
-    @media (min-width: @lg-width) {
-      margin-bottom: 0;
-      text-align: left;
-      grid-area: title;
-    }
-  }
-
-  &__description {
-    .text();
-    text-align: center;
-    margin-bottom: 25px;
-
-    @media (min-width: @md-width) {
-      width: 100%;
-      max-width: 585px;
-      margin: 0 auto;
-      margin-bottom: 40px;
-    }
-
-    @media (min-width: @lg-width) {
-      margin-bottom: 0;
-      text-align: left;
-      grid-area: description;
-
-      & p:first-child {
-        margin-top: 0;
       }
     }
 
-    & a:focus {
-      text-decoration: underline;
-      outline: none;
+    &__title {
+      margin-bottom: 15px;
+
+      @media (min-width: @md-width) {
+        width: 100%;
+        max-width: 585px;
+        margin: 0 auto;
+        margin-bottom: 20px;
+      }
+
+      @media (min-width: @lg-width) {
+        margin-bottom: 0;
+        text-align: left;
+        grid-area: title;
+      }
+    }
+
+    &__description {
+      .text();
+      margin-bottom: 25px;
+
+      @media (min-width: @md-width) {
+        width: 100%;
+        max-width: 585px;
+        margin: 0 auto;
+        margin-bottom: 40px;
+      }
+
+      @media (min-width: @lg-width) {
+        margin-bottom: 0;
+        text-align: left;
+        grid-area: description;
+
+        & p:first-child {
+          margin-top: 0;
+        }
+      }
+
+      & a:focus {
+        text-decoration: underline;
+        outline: none;
+      }
+    }
+
+    &__form {
+      @media (min-width: @lg-width) {
+        grid-area: form;
+      }
+    }
+
+
+  }
+}
+
+.modal {
+  & .application {
+
+    &__title {
+      width: 100%;
+      max-width: 300px;
+      margin: 0 auto 15px;
+
+      @media (min-width: @md-width) {
+        max-width: 430px;
+      }
+
+      @media (min-width: @lg-width) {
+        max-width: 430px;
+      }
+    }
+
+    &__description {
+      width: 100%;
+      max-width: 300px;
+      margin: 0 auto 25px;
+
+      @media (min-width: @md-width) {
+        max-width: 430px;
+      }
+
+      @media (min-width: @lg-width) {
+        max-width: 430px;
+        margin-bottom: 35px;
+      }
     }
   }
 
-  &__form {
-    @media (min-width: @lg-width) {
-      grid-area: form;
+  & .application-sent {
+    &__wrap {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100%;
     }
   }
 }
 
-.application-sent {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: @company-color;
-  color: @light;
-  z-index: 5;
-  display: flex;
-  align-items: center;
 
-  @media (min-width: @lg-width) {
-    align-items: flex-start;
-  }
-
-  &::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0.1;
-    background-attachment: fixed;
-    background-position: top center;
-    background-repeat: repeat;
-  }
-
-  &__wrap {
-    position: relative;
-    padding-top: 40px;
-    padding-bottom: 40px;
-    z-index: 5;
-
-    @media (min-width: @md-width) {
-      padding-top: 50px;
-      padding-bottom: 50px;
-    }
-
-    @media (min-width: @lg-width) {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      column-gap: 30px;
-      grid-template-areas:
-      "title description"
-      ". description";
-    }
-  }
-
-  &__title {
-    text-align: center;
-    margin-bottom: 15px;
-
-    @media (min-width: @md-width) {
-      width: 100%;
-      max-width: 585px;
-      margin: 0 auto;
-      margin-bottom: 20px;
-    }
-
-    @media (min-width: @lg-width) {
-      margin-bottom: 0;
-      text-align: left;
-      grid-area: title;
-    }
-  }
-
-  &__description {
-    .text();
-    text-align: center;
-    margin-bottom: 25px;
-
-    @media (min-width: @md-width) {
-      width: 100%;
-      max-width: 585px;
-      margin: 0 auto;
-      margin-bottom: 40px;
-    }
-
-    @media (min-width: @lg-width) {
-      & p:first-child {
-        margin-top: 0;
-      }
-
-      margin-bottom: 0;
-      text-align: left;
-      grid-area: description;
-    }
-  }
-
-  & .btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    max-width: 300px;
-    margin: 0 auto;
-
-    @media (min-width: @md-width) {
-      max-width: 585px;
-    }
-  }
-}
 
 
 

@@ -174,3 +174,4 @@ $(document).ready(function () {
     $('.privacy-policy__chapter-title').not(this).removeClass('privacy-policy__chapter-title--in').next().slideUp();
   });
 });
+

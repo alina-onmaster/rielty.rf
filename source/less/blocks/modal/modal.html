@@ -1,0 +1,34 @@
+<section class="modal" id="modal_presentation">
+  <!--application--form - открыта форма, application--sent - уведомление при успешной отправке формы-->
+  <div class="modal__body application application--form">
+    <div class="modal__content application__wrap">
+      <button class="modal__close-btn close-modal">
+        <svg class="icon" width="20" height="20">
+          <use class="icon__symbol" xlink:href="#icon-cross"></use>
+        </svg>
+      </button>
+      <h2 class="page__subtitle application__title">Скачать презентацию</h2>
+      <div class="application__description">
+        <p>Заполните форму для того, чтобы скачать презентацию.</p>
+      </div>
+      <form class="application__form form">
+        <div class="form__fields">
+          <div class="form__field">
+            <input class="error" type="text" placeholder="Ваше ФИО*">
+            <span>Текст ошибки</span>
+          </div>
+          <div class="form__field">
+            <input type="tel" placeholder="Ваш телефон*">
+          </div>
+        </div>
+        <div class="form__field form__field--privacy-policy">
+          <input type="checkbox" id="privacy-policy-presentation" checked>
+          <label for="privacy-policy-presentation">Даю согласие на обработку <a href="privacy-policy.html">Персональных данных</a></label>
+        </div>
+        <button class="btn btn--light" type="submit">Заказать звонок</button>
+      </form>
+      <include src="./source/less/blocks/application/application__sent.html"></include>
+    </div>
+
+  </div>
+</section>
