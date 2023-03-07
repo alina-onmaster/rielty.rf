@@ -137,6 +137,19 @@
     background-blend-mode: screen;
     color: @light;
 
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0.1;
+      background-attachment: fixed;
+      background-position: top center;
+      background-repeat: repeat;
+    }
+
     &--form {
 
 
@@ -259,18 +272,7 @@
   }
 
   & .application {
-    &::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      opacity: 0.1;
-      background-attachment: fixed;
-      background-position: top center;
-      background-repeat: repeat;
-    }
+
 
     &__wrap {
       z-index: 5;
@@ -349,6 +351,7 @@
 
 .modal {
   & .application {
+
 
     &__title {
       width: 100%;
