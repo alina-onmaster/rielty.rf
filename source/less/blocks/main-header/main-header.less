@@ -54,9 +54,33 @@
       & .phone-number {
         .navi-title();
         padding: 10px;
+        display: block;
+        position: relative;
 
         @media (min-width: @lg-width) {
           padding: 0;
+
+          &::before {
+            content: "";
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            width: 0;
+            height: 1px;
+            background-color: @gray-light;
+            transform: translateX(-50%);
+            transition: @transition;
+          }
+
+          &:hover,
+          &:focus {
+            text-decoration: none;
+            outline: none;
+            &::before {
+              width: 100%;
+              background-color: @company-color;
+            }
+          }
         }
       }
     }

@@ -8,10 +8,40 @@
     flex-direction: column;
   }
   &__item a {
+    display: inline-block;
+    position: relative;
+    color: inherit;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      width: 0;
+      height: 1px;
+      background-color: @gray-light;
+      transform: translateX(-50%);
+      transition: @transition;
+    }
+
     &:hover,
     &:focus {
+      text-decoration: none;
       color: @company-color;
+
+      @media (min-width: @lg-width) {
+        &::before {
+          width: 100%;
+          background-color: @dark;
+        }
+      }
+    }
+
+    &:focus {
       outline-color: @company-color;
+      @media (min-width: @lg-width) {
+        outline: none;
+      }
     }
   }
 
