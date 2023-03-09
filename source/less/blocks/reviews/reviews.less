@@ -25,10 +25,28 @@
   &__item {
     .mp();
     padding: 20px 20px 45px;
-    border: 1px solid @gray-light;
+    position: relative;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 40% 100%, 33% 90%, 0 90%);
+    background-color: @gray-light;
+
 
     @media (min-width: @md-width) {
       padding: 30px 30px 55px;
+    }
+
+    & .border {
+      position: absolute;
+      width: calc(100% - 2px);
+      height: calc(100% - 2px);
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%);
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 40% 100%, 33% 90%, 0 90%);
+      z-index: -1;
+      background-position: top left;
+      background-repeat: repeat;
+      background-attachment: fixed;
+
     }
   }
 }
