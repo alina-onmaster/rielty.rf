@@ -16,6 +16,7 @@ openMenuBtn.onclick = function () {
 closeMenuBtn.onclick = function () {
   if (windowWidth < 992) {
     menu.classList.remove("main-nav--opened");
+    body.classList.remove("lock");
   };
 };
 
