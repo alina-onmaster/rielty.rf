@@ -128,6 +128,10 @@ window.onload = function() {
 /*Слайдер Отзывы start*/
 new Swiper('.reviews__swiper-container',{
   preloadImages: false,
+  navigation: {
+    nextEl: '.reviews__slider-btn--right',
+    prevEl: '.reviews__slider-btn--left'
+  },
   lazy: {
     loadOnTransitionStart: false,
     loadPrevNext: false,

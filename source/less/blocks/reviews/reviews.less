@@ -1,4 +1,43 @@
 .reviews {
+  &__header-wrap {
+    @media (min-width: @lg-width) {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+  }
+  &__btn-wrap {
+    display: none;
+
+    @media (min-width: @lg-width) {
+      display: flex;
+      gap: 10px;
+    }
+  }
+
+  &__slider-btn {
+    .btn-reset();
+
+    & .icon {
+      display: block;
+      width: 40px;
+      height: 40px;
+
+      & use.icon__symbol {
+        stroke: @gray;
+      }
+    }
+
+    &.swiper-button-disabled {
+      & .icon {
+
+        & use.icon__symbol {
+          stroke: @gray-light;
+        }
+      }
+    }
+  }
+
   &__list-wrap {
     width: 100%;
     overflow: hidden;
