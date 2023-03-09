@@ -1,21 +1,34 @@
 /*Бургер-меню start*/
-
+const body = document.querySelector('body');
 let openMenuBtn = document.querySelector(".burger");
 let closeMenuBtn = document.querySelector(".main-nav__close-btn");
 let menu = document.querySelector(".main-nav");
+let menuElement = document.querySelector(".site-nav__item a");
 let windowWidth = document.documentElement.clientWidth;
 
 openMenuBtn.onclick = function () {
   if (windowWidth < 992) {
     menu.classList.add("main-nav--opened");
+    menu.classList.remove("main-nav--closed");
+    body.classList.add("lock");
   };
 };
 
 closeMenuBtn.onclick = function () {
   if (windowWidth < 992) {
     menu.classList.remove("main-nav--opened");
+    menu.classList.add("main-nav--closed");
   };
 };
+
+menuElement.onclick = function () {
+  if (windowWidth < 992) {
+    menu.classList.remove("main-nav--opened");
+    menu.classList.add("main-nav--closed");
+  };
+};
+
+
 
 /*Бургер-меню end*/
 
@@ -128,6 +141,10 @@ window.onload = function() {
 /*Слайдер Отзывы start*/
 new Swiper('.reviews__swiper-container',{
   preloadImages: false,
+  navigation: {
+    nextEl: '.reviews__slider-btn--right',
+    prevEl: '.reviews__slider-btn--left'
+  },
   lazy: {
     loadOnTransitionStart: false,
     loadPrevNext: false,
@@ -174,3 +191,4 @@ $(document).ready(function () {
     $('.privacy-policy__chapter-title').not(this).removeClass('privacy-policy__chapter-title--in').next().slideUp();
   });
 });
+

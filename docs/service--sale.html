@@ -14,6 +14,14 @@
       <div style="display:none">
         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol id="icon-2gis" viewBox="0 0 19 20">
 <path class="icon__color-element" d="M13.6797 11.3648C10.3535 11.3817 9.81548 13.4587 9.63616 15.2149L9.55465 15.9916H8.88609L8.80458 15.2149C8.62526 13.4587 8.0709 11.3816 4.85882 11.3648C4.32078 10.2164 4.09251 9.28765 4.09251 8.24069C4.09251 5.62331 6.16323 3.17468 9.22848 3.17468C12.2938 3.17468 14.3319 5.60633 14.3319 8.25765C14.3319 9.28765 14.2341 10.2164 13.6797 11.3648ZM9.19593 0C4.14147 0 0 4.28924 0 9.54089C0 14.8096 4.14147 19.0987 9.19593 19.0987C14.2993 19.0987 18.4244 14.8096 18.4244 9.54089C18.4244 4.28925 14.2993 0 9.19593 0Z" fill="#000000"></path>
+</symbol><symbol id="icon-arrow-circle-left" viewBox="0 0 40 40">
+<path class="icon__color-element" d="M20 35C28.2843 35 35 28.2843 35 20C35 11.7157 28.2843 5 20 5C11.7157 5 5 11.7157 5 20C5 28.2843 11.7157 35 20 35Z" stroke="#000000" stroke-width="2" stroke-miterlimit="10"></path>
+<path class="icon__color-element" d="M19.0469 25.2969L13.75 20L19.0469 14.7031" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+<path class="icon__color-element" d="M13.75 20H26.25" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+</symbol><symbol id="icon-arrow-circle-right" viewBox="0 0 40 40">
+<path class="icon__color-element" d="M20 35C28.2843 35 35 28.2843 35 20C35 11.7157 28.2843 5 20 5C11.7157 5 5 11.7157 5 20C5 28.2843 11.7157 35 20 35Z" stroke="#000000" stroke-width="2" stroke-miterlimit="10"></path>
+<path class="icon__color-element" d="M20.9531 25.2969L26.25 20L20.9531 14.7031" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+<path class="icon__color-element" d="M13.75 20H26.25" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
 </symbol><symbol id="icon-arrow-up-right" viewBox="0 0 32 32">
 <path class="icon__color-element" d="M8 24L24 8" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
 <path class="icon__color-element" d="M11 8H24V21" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
@@ -78,7 +86,7 @@
       <a href="./team.html">Команда</a>
     </li>
     <li class="site-nav__item">
-      <a href="##" rel="noopener noreferrer nofollow">Отзывы</a><!--Ведет на страницу 2gis-->
+      <a href="./service--sale.html#reviews">Отзывы</a>
     </li>
   </ul>
 </nav>
@@ -116,14 +124,14 @@
 
       </div>
       <ul class="service__nav-list">
-        <li class="service__nav-item active"><a href="./service.html" aria-current="page">Продать</a></li>
-        <li class="service__nav-item"><a href="./service.html">Купить</a></li>
-        <li class="service__nav-item"><a href="./service.html">Обменять</a></li>
-        <li class="service__nav-item"><a href="./service.html">Сопровождение сделок</a></li>
-        <li class="service__nav-item"><a href="./service.html">Ипотека</a></li>
-        <li class="service__nav-item"><a href="./service.html">Оценка</a></li>
-        <li class="service__nav-item"><a href="./service.html">Ремонт</a></li>
-        <li class="service__nav-item"><a href="./service.html">Строительство домов</a></li>
+        <li class="service__nav-item active"><a href="./service--sale.html" aria-current="page">Продать</a></li>
+        <li class="service__nav-item"><a href="./service--sale.html">Купить</a></li>
+        <li class="service__nav-item"><a href="./service--sale.html">Обменять</a></li>
+        <li class="service__nav-item"><a href="./service--sale.html">Сопровождение сделок</a></li>
+        <li class="service__nav-item"><a href="./service--sale.html">Ипотека</a></li>
+        <li class="service__nav-item"><a href="./service--sale.html">Оценка</a></li>
+        <li class="service__nav-item"><a href="./service--sale.html">Ремонт</a></li>
+        <li class="service__nav-item"><a href="./service--sale.html">Строительство домов</a></li>
       </ul>
     </div>
   </div>
@@ -178,9 +186,23 @@
             </div>
           </div>
         </section>
-        <section class="reviews page__section">
-  <div class="page__wrap">
+        <section class="reviews page__section" id="reviews">
+  <div class="page__wrap reviews__header-wrap">
     <h2 class="page__subtitle">Отзывы наших клиентов</h2>
+    <div class="reviews__btn-wrap">
+      <button class="reviews__slider-btn reviews__slider-btn--left">
+        <span class="visually-hidden">Назад</span>
+        <svg class="icon" width="40" height="40">
+          <use class="icon__symbol" xlink:href="#icon-arrow-circle-left"></use>
+        </svg>
+      </button>
+      <button class="reviews__slider-btn reviews__slider-btn--right">
+        <span class="visually-hidden">Вперёд</span>
+        <svg class="icon" width="40" height="40">
+          <use class="icon__symbol" xlink:href="#icon-arrow-circle-right"></use>
+        </svg>
+      </button>
+    </div>
   </div>
   <div class="reviews__list-wrap">
     <div class="reviews__swiper-container swiper-container">
@@ -190,6 +212,16 @@
             <figcaption class="review__author"><span>Ксения Никитина</span></figcaption>
             <blockquote class="review__preview">Хочу выразить ОГРОМНЕЙШУЮ благодарность Ирине и Ивану. Мы знакомы с 2015 года, за это время наша семья оценила ВЫСОКИЙ профессионализм , внимательность , чуткость этих риэлторов . Было много куплено и продано объектов недвижимости и всегда Ирина и Иван были на связи , помогали в любых ситуациях, решали любые вопросы. Так как нам есть с чем сравнить, хочу сказать вам за это большое спасибо , начиная от потрясающих фотографий в квартирах , которые делает Иван , (а я хочу сказать это очень важно, так как покупатель всегда клюет на красивую картинку), заканчивая полным сопровождением на сделках.Психологически с ними можно выдохнуть , так как у них всегда все под контролем !Благодарю за всё , с наступающим Новым годом!</blockquote>
             <a class="review__link-more">Читать полностью</a>
+            <span class="border"></span>
+          </figure>
+
+        </li>
+        <li class="swiper-slide">
+          <figure class="reviews__item review">
+            <figcaption class="review__author"><span>Ксения Никитина</span></figcaption>
+            <blockquote class="review__preview">Хочу выразить ОГРОМНЕЙШУЮ благодарность Ирине и Ивану. Мы знакомы с 2015 года, за это время наша семья оценила ВЫСОКИЙ профессионализм , внимательность , чуткость этих риэлторов . Было много куплено и продано объектов недвижимости и всегда Ирина и Иван были на связи , помогали в любых ситуациях, решали любые вопросы. Так как нам есть с чем сравнить, хочу сказать вам за это большое спасибо , начиная от потрясающих фотографий в квартирах , которые делает Иван , (а я хочу сказать это очень важно, так как покупатель всегда клюет на красивую картинку), заканчивая полным сопровождением на сделках.Психологически с ними можно выдохнуть , так как у них всегда все под контролем !Благодарю за всё , с наступающим Новым годом!</blockquote>
+            <a class="review__link-more">Читать полностью</a>
+            <span class="border"></span>
           </figure>
         </li>
         <li class="swiper-slide">
@@ -197,6 +229,7 @@
             <figcaption class="review__author"><span>Ксения Никитина</span></figcaption>
             <blockquote class="review__preview">Хочу выразить ОГРОМНЕЙШУЮ благодарность Ирине и Ивану. Мы знакомы с 2015 года, за это время наша семья оценила ВЫСОКИЙ профессионализм , внимательность , чуткость этих риэлторов . Было много куплено и продано объектов недвижимости и всегда Ирина и Иван были на связи , помогали в любых ситуациях, решали любые вопросы. Так как нам есть с чем сравнить, хочу сказать вам за это большое спасибо , начиная от потрясающих фотографий в квартирах , которые делает Иван , (а я хочу сказать это очень важно, так как покупатель всегда клюет на красивую картинку), заканчивая полным сопровождением на сделках.Психологически с ними можно выдохнуть , так как у них всегда все под контролем !Благодарю за всё , с наступающим Новым годом!</blockquote>
             <a class="review__link-more">Читать полностью</a>
+            <span class="border"></span>
           </figure>
         </li>
         <li class="swiper-slide">
@@ -204,6 +237,24 @@
             <figcaption class="review__author"><span>Ксения Никитина</span></figcaption>
             <blockquote class="review__preview">Хочу выразить ОГРОМНЕЙШУЮ благодарность Ирине и Ивану. Мы знакомы с 2015 года, за это время наша семья оценила ВЫСОКИЙ профессионализм , внимательность , чуткость этих риэлторов . Было много куплено и продано объектов недвижимости и всегда Ирина и Иван были на связи , помогали в любых ситуациях, решали любые вопросы. Так как нам есть с чем сравнить, хочу сказать вам за это большое спасибо , начиная от потрясающих фотографий в квартирах , которые делает Иван , (а я хочу сказать это очень важно, так как покупатель всегда клюет на красивую картинку), заканчивая полным сопровождением на сделках.Психологически с ними можно выдохнуть , так как у них всегда все под контролем !Благодарю за всё , с наступающим Новым годом!</blockquote>
             <a class="review__link-more">Читать полностью</a>
+            <span class="border"></span>
+          </figure>
+
+        </li>
+        <li class="swiper-slide">
+          <figure class="reviews__item review">
+            <figcaption class="review__author"><span>Ксения Никитина</span></figcaption>
+            <blockquote class="review__preview">Хочу выразить ОГРОМНЕЙШУЮ благодарность Ирине и Ивану. Мы знакомы с 2015 года, за это время наша семья оценила ВЫСОКИЙ профессионализм , внимательность , чуткость этих риэлторов . Было много куплено и продано объектов недвижимости и всегда Ирина и Иван были на связи , помогали в любых ситуациях, решали любые вопросы. Так как нам есть с чем сравнить, хочу сказать вам за это большое спасибо , начиная от потрясающих фотографий в квартирах , которые делает Иван , (а я хочу сказать это очень важно, так как покупатель всегда клюет на красивую картинку), заканчивая полным сопровождением на сделках.Психологически с ними можно выдохнуть , так как у них всегда все под контролем !Благодарю за всё , с наступающим Новым годом!</blockquote>
+            <a class="review__link-more">Читать полностью</a>
+            <span class="border"></span>
+          </figure>
+        </li>
+        <li class="swiper-slide">
+          <figure class="reviews__item review">
+            <figcaption class="review__author"><span>Ксения Никитина</span></figcaption>
+            <blockquote class="review__preview">Хочу выразить ОГРОМНЕЙШУЮ благодарность Ирине и Ивану. Мы знакомы с 2015 года, за это время наша семья оценила ВЫСОКИЙ профессионализм , внимательность , чуткость этих риэлторов . Было много куплено и продано объектов недвижимости и всегда Ирина и Иван были на связи , помогали в любых ситуациях, решали любые вопросы. Так как нам есть с чем сравнить, хочу сказать вам за это большое спасибо , начиная от потрясающих фотографий в квартирах , которые делает Иван , (а я хочу сказать это очень важно, так как покупатель всегда клюет на красивую картинку), заканчивая полным сопровождением на сделках.Психологически с ними можно выдохнуть , так как у них всегда все под контролем !Благодарю за всё , с наступающим Новым годом!</blockquote>
+            <a class="review__link-more">Читать полностью</a>
+            <span class="border"></span>
           </figure>
         </li>
       </ul>
@@ -293,7 +344,7 @@
       <a href="./team.html">Команда</a>
     </li>
     <li class="site-nav__item">
-      <a href="##" rel="noopener noreferrer nofollow">Отзывы</a><!--Ведет на страницу 2gis-->
+      <a href="./service--sale.html#reviews">Отзывы</a>
     </li>
   </ul>
 </nav>
