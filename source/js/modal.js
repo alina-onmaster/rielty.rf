@@ -1,5 +1,4 @@
 const modalLinks = document.querySelectorAll('.modal-link');
-const body = document.querySelector('body');
 const lockPadding = document.querySelectorAll('.lock-padding');
 
 let unlock = true;

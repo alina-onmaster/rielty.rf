@@ -3,13 +3,12 @@ const body = document.querySelector('body');
 let openMenuBtn = document.querySelector(".burger");
 let closeMenuBtn = document.querySelector(".main-nav__close-btn");
 let menu = document.querySelector(".main-nav");
-let menuElement = document.querySelector(".site-nav__item a");
+let menuList = document.querySelectorAll(".site-nav__item > a");
 let windowWidth = document.documentElement.clientWidth;
 
 openMenuBtn.onclick = function () {
   if (windowWidth < 992) {
     menu.classList.add("main-nav--opened");
-    menu.classList.remove("main-nav--closed");
     body.classList.add("lock");
   };
 };
@@ -17,15 +16,16 @@ openMenuBtn.onclick = function () {
 closeMenuBtn.onclick = function () {
   if (windowWidth < 992) {
     menu.classList.remove("main-nav--opened");
-    menu.classList.add("main-nav--closed");
   };
 };
 
-menuElement.onclick = function () {
-  if (windowWidth < 992) {
-    menu.classList.remove("main-nav--opened");
-    menu.classList.add("main-nav--closed");
-  };
+for (const menuItem of menuList) {
+  menuItem.addEventListener('click', function(event) {
+    if(window.innerWidth < 992 ) {
+      menu.classList.remove("main-nav--opened");
+      body.classList.remove("lock");
+    }
+  })
 };
 
 
