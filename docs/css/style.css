@@ -119,7 +119,7 @@ a:hover {
   border: 1px solid;
   -webkit-transition: 0.4s;
   transition: 0.4s;
-  width: 300px;
+  width: 100%;
   min-height: 55px;
 }
 @media (min-width: 992px) {
@@ -136,7 +136,7 @@ a:hover {
 }
 @media (min-width: 768px) {
   .btn {
-    width: 345px;
+    max-width: 345px;
     min-height: 60px;
   }
 }
@@ -797,8 +797,13 @@ body {
 }
 .select-options li {
   margin: 0;
-  padding: 5px 0;
+  padding: 10px 0;
   @include transition(all 0.15s ease-in);
+}
+@media (min-width: 992px) {
+  .select-options li {
+    padding: 5px 0;
+  }
 }
 .select-options li:hover,
 .select-options li.is-selected {
@@ -1610,8 +1615,6 @@ body {
   .team__header .header__title {
     padding-right: 20px;
     max-width: 590px;
-    word-wrap: break-word;
-    /* Перенос слов */
   }
 }
 .team__header .header__img-wrap {
@@ -2224,7 +2227,6 @@ body {
 .form__field {
   position: relative;
   width: 100%;
-  max-width: 300px;
   margin: 0 auto;
 }
 @media (min-width: 768px) {
@@ -2560,7 +2562,6 @@ body {
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
-  max-width: 300px;
   margin: 0 auto;
 }
 @media (min-width: 768px) {
@@ -2734,13 +2735,13 @@ body {
 }
 .service__nav-select {
   display: block;
-  max-width: 500px;
   margin: 0 auto;
   width: 100%;
   margin-bottom: 35px;
 }
 @media (min-width: 768px) {
   .service__nav-select {
+    max-width: 500px;
     margin-bottom: 29px;
     padding: 19px 20px;
   }
@@ -3110,6 +3111,8 @@ body {
   -webkit-transition: 0.4s;
   transition: 0.4s;
   z-index: 2;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
 }
 @media (min-width: 768px) {
   .complexes__item::after,
