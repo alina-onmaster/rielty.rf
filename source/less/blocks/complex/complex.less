@@ -309,11 +309,15 @@
 
   &__title {
     .mp();
-    .descriptor-2();
+    .descriptor-2(2.4rem);
     text-align: center;
     /*margin-top: 57px;*/
     margin-bottom: 5px;
     transition: @transition;
+
+    @media (min-width: @md-width) {
+      .descriptor-2();
+    }
 
     @media (min-width: @lg-width) {
       transform: translateY(90px);
@@ -340,8 +344,10 @@
     text-align: center;
     margin-bottom: 15px;
     transition: @transition;
+    display: none;
 
     @media (min-width: @md-width) {
+      display: block;
       .caption();
       margin-bottom: 30px;
     }

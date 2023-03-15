@@ -3886,7 +3886,7 @@ body {
 .complexes__item .complex__title {
   margin: 0;
   padding: 0;
-  font-size: 1.7rem;
+  font-size: 2.4rem;
   line-height: 1.1;
   font-weight: 500;
   font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -3896,6 +3896,15 @@ body {
   margin-bottom: 5px;
   -webkit-transition: 0.4s;
   transition: 0.4s;
+}
+@media (min-width: 768px) {
+  .complexes__item .complex__title {
+    font-size: 1.7rem;
+    line-height: 1.1;
+    font-weight: 500;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-style: normal;
+  }
 }
 @media (min-width: 992px) {
   .complexes__item .complex__title {
@@ -3940,9 +3949,11 @@ body {
   margin-bottom: 15px;
   -webkit-transition: 0.4s;
   transition: 0.4s;
+  display: none;
 }
 @media (min-width: 768px) {
   .complexes__item .complex__description {
+    display: block;
     font-size: 1.2rem;
     line-height: 1.4;
     font-weight: 400;
