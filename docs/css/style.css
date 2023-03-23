@@ -2810,7 +2810,6 @@ body {
 }
 .service__nav-item.active {
   color: #282828;
-  font-weight: 700;
 }
 .service__nav-item.active a::before {
   width: 100%;
